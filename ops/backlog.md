@@ -4,14 +4,14 @@
 
 | ID | Задача | Статус | Файл |
 |----|--------|--------|------|
-| — | — | — | — |
+| TASK-003 | Деплой Vercel — подключить проект на vercel.com | ready | [TASK-003](./tasks/TASK-003-vercel-deploy.md) |
 
 ## Не сделано (хвосты)
 
 | ID | Что | Приоритет |
 |----|-----|-----------|
-| — | Деплой + custom domain | later |
-| — | HY — финальная вычитка носителем (черновик готов) | low |
+| — | Custom domain garni10.abovyan.app | after Vercel import |
+| — | HY — финальная вычитка носителем | low |
 
 ## Готово
 
@@ -20,3 +20,5 @@
 | — | Подготовка docs/ (бриф, контент, дизайн) | 2026-06-27 |
 | TASK-001 | Astro-лендинг MVP локально | 2026-06-27 |
 | TASK-002 | HY перевод + HEIC + OG 1200×630 | 2026-06-27 |
+| — | GitHub push → apartment-abovyan | 2026-06-27 |
+| TASK-003 | Vercel-ready: vercel.json, CI, docs | 2026-06-27 |
