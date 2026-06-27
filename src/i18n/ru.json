@@ -76,7 +76,7 @@
   "gallery.subtitle": "Что видите — то и покупаете",
 
   "floorplan.title": "Планировка 78 м²",
-  "floorplan.note": "Схема восстановлена по реальным фото. Официальный план — по запросу.",
+  "floorplan.note": "Официальная схема планировки квартиры.",
   "floorplan.room.hall": "Прихожая",
   "floorplan.room.living": "Зал + лоджия",
   "floorplan.room.bed1": "Комната 1",
@@ -126,5 +126,6 @@
   "img.gallery.06.alt": "Балкон, вид на зелень и город",
   "img.gallery.07.alt": "Прихожая, паркет",
   "img.gallery.08.alt": "Кухня",
-  "img.gallery.09.alt": "Вид из окна — гора Атис"
+  "img.gallery.09.alt": "Вид из окна — гора Атис",
+  "img.floorplan.alt": "Планировка квартиры 78 м², ул. Гарни 10, Абовян"
 }

@@ -76,7 +76,7 @@
   "gallery.subtitle": "What you see is what you get",
 
   "floorplan.title": "78 m² Floor Plan",
-  "floorplan.note": "Reconstructed from actual photos. Official plan available on request.",
+  "floorplan.note": "Official apartment floor plan.",
   "floorplan.room.hall": "Entry Hall",
   "floorplan.room.living": "Living Room + Loggia",
   "floorplan.room.bed1": "Room 1",
@@ -126,5 +126,6 @@
   "img.gallery.06.alt": "Balcony, view of greenery and city",
   "img.gallery.07.alt": "Entry hall, parquet floor",
   "img.gallery.08.alt": "Kitchen",
-  "img.gallery.09.alt": "Window view — Mount Atis"
+  "img.gallery.09.alt": "Window view — Mount Atis",
+  "img.floorplan.alt": "78 m² apartment floor plan, 10 Garni St., Abovyan"
 }
