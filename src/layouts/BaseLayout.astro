@@ -1,0 +1,45 @@
+---
+import type { Locale } from '../utils/i18n';
+import '../styles/global.css';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+}
+
+const { locale, title, description } = Astro.props;
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const canonical = `${siteUrl}/${locale}/`;
+const locales: Locale[] = ['hy', 'ru', 'en'];
+const ogLocale = locale === 'hy' ? 'hy_AM' : locale === 'ru' ? 'ru_RU' : 'en_US';
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {locales.map((loc) => (
+      <link rel="alternate" hreflang={loc} href={`${siteUrl}/${loc}/`} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/hy/`} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:image" content={`${siteUrl}/images/hero-atist-monument.jpg`} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/images/hero-atist-monument.jpg" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
