@@ -7,27 +7,26 @@ interface Props {
 
 const { t } = Astro.props;
 
-/** Квадратные фото: public/images/location/{key}.jpg — подставь когда будут готовы */
 const cards = [
   {
     key: 'atis',
-    image: '/images/nearby-atist.jpg',
+    image: '/images/location/atis.jpg',
     alt: t['img.atist.alt'],
   },
   {
     key: 'adventure',
-    image: null,
-    alt: t['nearby.adventure.title'],
+    image: '/images/location/adventure.jpg',
+    alt: t['img.adventure.alt'],
   },
   {
     key: 'church',
-    image: '/images/church-st-john-01.png',
+    image: '/images/location/church.png',
     alt: t['img.church.alt'],
   },
   {
     key: 'logistics',
-    image: null,
-    alt: t['nearby.logistics.title'],
+    image: '/images/location/logistics.webp',
+    alt: t['img.logistics.alt'],
   },
 ] as const;
 ---
@@ -42,12 +41,8 @@ const cards = [
       {cards.map(({ key, image, alt }) => (
         <li class="location-grid__cell">
           <article class="location-card">
-            <div class="location-card__media" class:list={{ 'is-empty': !image }}>
-              {image ? (
-                <img src={image} alt={alt} loading="lazy" decoding="async" />
-              ) : (
-                <span class="location-card__placeholder" aria-hidden="true" />
-              )}
+            <div class="location-card__media">
+              <img src={image} alt={alt} loading="lazy" decoding="async" />
             </div>
             <div class="location-card__body">
               <h3>{t[`nearby.${key}.title`]}</h3>
@@ -85,7 +80,6 @@ const cards = [
     box-shadow: var(--shadow);
   }
 
-  /* Квадратный слот 1:1 — сюда ляжет квадратное фото целиком */
   .location-card__media {
     aspect-ratio: 1 / 1;
     width: 100%;
@@ -101,19 +95,6 @@ const cards = [
     height: 100%;
     object-fit: contain;
     object-position: center;
-  }
-
-  .location-card__media.is-empty {
-    background: linear-gradient(145deg, #f0e9df 0%, #ddd4c8 100%);
-  }
-
-  .location-card__placeholder {
-    display: block;
-    width: 40%;
-    aspect-ratio: 1;
-    border-radius: 8px;
-    border: 2px dashed rgba(44, 36, 25, 0.15);
-    background: rgba(255, 255, 255, 0.35);
   }
 
   .location-card__body {
