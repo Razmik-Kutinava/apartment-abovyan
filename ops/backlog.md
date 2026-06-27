@@ -24,4 +24,4 @@
 | TASK-003 | Деплой Vercel production | 2026-06-27 |
 | — | SEO маркетинг (код): JSON-LD, meta, H1, robots | 2026-06-27 |
 | — | docs/11-marketing-seo.md | 2026-06-27 |
-| — | Единый URL apartment-abovyan.vercel.app | 2026-06-27 |
+| — | GSC: файл верификации в public/, sitemap готов | 2026-06-27 |
