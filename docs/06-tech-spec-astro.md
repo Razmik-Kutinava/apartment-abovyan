@@ -75,7 +75,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://garni10.abovyan.app', // TODO: финальный домен
+  site: 'https://apartment-abovyan.vercel.app',
   i18n: {
     defaultLocale: 'hy',
     locales: ['hy', 'ru', 'en'],

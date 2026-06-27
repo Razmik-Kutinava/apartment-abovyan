@@ -5,7 +5,7 @@ const site =
   process.env.SITE_URL?.replace(/\/$/, '') ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'https://garni10.abovyan.app');
+    : 'https://apartment-abovyan.vercel.app');
 
 export default defineConfig({
   site,

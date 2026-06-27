@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = ({ site }) => {
-  const base = site?.toString().replace(/\/$/, '') ?? 'https://garni10.abovyan.app';
+  const base = site?.toString().replace(/\/$/, '') ?? 'https://apartment-abovyan.vercel.app';
 
   return new Response(
     `User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap-index.xml\n`,

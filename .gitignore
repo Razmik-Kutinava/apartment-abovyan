@@ -7,3 +7,5 @@ dist/
 
 # Исходники фото — в репо только public/images/
 assets/
+.vercel
+.env*

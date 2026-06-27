@@ -2,7 +2,7 @@
 
 > **Назначение:** единый документ — что уже сделано на сайте, что осталось, и пошаговые чек-листы, чтобы закрыть маркетинг и поиск полностью.  
 > **Сайт:** один лендинг, 3 языка — `/hy/` (default), `/ru/`, `/en/`  
-> **Домен:** `https://garni10.abovyan.app` (или свой после деплоя)  
+> **Домен:** `https://apartment-abovyan.vercel.app`  
 > **Связанные доки:** [08-seo-meta.md](./08-seo-meta.md) (технические шаблоны meta), [07-i18n-spec.md](./07-i18n-spec.md) (языки), [10-deploy-vercel.md](./10-deploy-vercel.md) (деплой)
 
 ---
@@ -175,7 +175,7 @@
 ```
 User-agent: *
 Allow: /
-Sitemap: https://garni10.abovyan.app/sitemap-index.xml
+Sitemap: https://apartment-abovyan.vercel.app/sitemap-index.xml
 ```
 
 **Чек-лист:**
@@ -306,7 +306,7 @@ Sitemap: https://garni10.abovyan.app/sitemap-index.xml
 
 - [ ] Import репозитория на Vercel
 - [ ] Env `SITE_URL` = финальный домен
-- [ ] Custom domain (garni10.abovyan.app или свой)
+- [x] Production URL: `apartment-abovyan.vercel.app`
 - [ ] Проверить: `/hy/`, `/ru/`, `/en/` открываются
 - [ ] Проверить OG-превью: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) или аналог
 - [ ] Обновить `robots.txt` — Sitemap на финальный URL
@@ -371,7 +371,7 @@ Sitemap: https://garni10.abovyan.app/sitemap-index.xml
 ## Шпаргалка ссылок
 
 ```
-Домен:     https://garni10.abovyan.app
+Домен:     https://apartment-abovyan.vercel.app
 HY:        /hy/   ← default, диаспора
 RU:        /ru/   ← РФ, СНГ
 EN:        /en/   ← международные

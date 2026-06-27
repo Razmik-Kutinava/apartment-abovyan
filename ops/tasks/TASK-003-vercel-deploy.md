@@ -23,13 +23,12 @@
 
 ---
 
-## Чек-лист Vercel (ручные шаги)
+## Чек-лист Vercel
 
-- [x] Import `Razmik-Kutinava/apartment-abovyan` на vercel.com (CLI + GitHub connect)
+- [x] Import `Razmik-Kutinava/apartment-abovyan` на vercel.com
 - [x] Build: `npm run build`, Output: `dist`
-- [x] Env `SITE_URL` = `https://garni10.abovyan.app`
+- [x] Env `SITE_URL` = `https://apartment-abovyan.vercel.app`
 - [x] Первый deploy OK
-- [x] Custom domain `garni10.abovyan.app` добавлен в проект
 - [x] `robots.txt` — динамический, sitemap из SITE_URL
 
 ---
@@ -44,11 +43,7 @@ npm ci && npm run build
 - [x] Vercel production OK
 - [x] `/hy/` `/ru/` `/en/` live
 
-**URLs:**
-
-- Production: https://salehouse.vercel.app
-- Custom: https://garni10.abovyan.app (DNS — проверить у регистратора)
-- Vercel dashboard: https://vercel.com/darksegun1988-2149s-projects/salehouse
+**URL:** https://apartment-abovyan.vercel.app
 
 ---
 
@@ -56,6 +51,6 @@ npm ci && npm run build
 
 | Область | Было | Стало |
 |---------|------|-------|
-| Деплой | only local | **live** Vercel + GitHub auto-deploy |
+| Деплой | only local | **live** apartment-abovyan.vercel.app |
 | Remote | GitHub main | auto-deploy on push |
-| Домен | TODO в docs | `garni10.abovyan.app` + `salehouse.vercel.app` |
+| Домен | разные URL в docs | единый `apartment-abovyan.vercel.app` |

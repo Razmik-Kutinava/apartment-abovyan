@@ -1,7 +1,7 @@
 # 10 — Деплой на Vercel (GitHub)
 
 > **Репозиторий:** [Razmik-Kutinava/apartment-abovyan](https://github.com/Razmik-Kutinava/apartment-abovyan)  
-> **Планируемый домен:** `garni10.abovyan.app` (или свой)  
+> **Production URL:** `https://apartment-abovyan.vercel.app`  
 > **Стек:** Astro 5 SSG → статика в `dist/`
 
 ---
@@ -31,23 +31,11 @@
 
    | Key | Value | Зачем |
    |-----|-------|-------|
-   | `SITE_URL` | `https://garni10.abovyan.app` | canonical, sitemap, OG (когда домен готов) |
-
-   До подключения своего домена можно временно поставить `https://<project>.vercel.app`.
+   | `SITE_URL` | `https://apartment-abovyan.vercel.app` | canonical, sitemap, OG |
 
 5. **Deploy** → после push в `main` деплой идёт автоматически.
 
 ---
-
-## Custom domain
-
-1. Vercel → Project → **Settings → Domains**
-2. Добавить `garni10.abovyan.app` (или другой)
-3. У регистратора DNS:
-   - **A** `@` → `76.76.21.21` (Vercel)
-   - или **CNAME** `www` → `cname.vercel-dns.com`
-4. Обновить `SITE_URL` в Vercel env → **Redeploy**
-5. Обновить `public/robots.txt` — строка Sitemap на финальный URL
 
 ---
 

@@ -166,12 +166,6 @@ Sitemap: https://DOMAIN/sitemap-index.xml
 
 ---
 
-## Domain suggestions
+## Production URL
 
-| Domain | Notes |
-|--------|-------|
-| `garni10.am` | Ideal if available |
-| `abovyan-apartment.am` | Descriptive |
-| `garni10-abovyan.netlify.app` | Free fallback for MVP |
-
-**TODO:** зарегистрировать домен до деплоя.
+`https://apartment-abovyan.vercel.app` — canonical, sitemap, OG, шаринг.
