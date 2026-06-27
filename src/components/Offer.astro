@@ -1,0 +1,61 @@
+---
+import type { Translations } from '../utils/i18n';
+import { buildWhatsAppUrl } from '../utils/whatsapp';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+const benefits = ['v1', 'v2', 'v3', 'v4'] as const;
+const waUrl = buildWhatsAppUrl(t['offer.cta_prefill']);
+---
+
+<section class="section section--surface offer" id="offer">
+  <div class="container offer__inner">
+    <div class="offer__content">
+      <h2>{t['offer.title']}</h2>
+      <p class="offer__price">{t['offer.price']}</p>
+      <p class="offer__note">{t['offer.price_note']}</p>
+      <ul class="offer__list">
+        {benefits.map((key) => (
+          <li>{t[`offer.${key}`]}</li>
+        ))}
+      </ul>
+      <a href={waUrl} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
+        {t['offer.cta']}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .offer__inner {
+    text-align: center;
+  }
+  .offer__price {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 2rem + 3vw, 4rem);
+    color: var(--color-gold);
+    font-weight: 700;
+    margin: var(--space-md) 0 var(--space-xs);
+  }
+  .offer__note {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+  .offer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-lg);
+    text-align: left;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .offer__list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .offer__list li::before {
+    content: '✓ ';
+    color: var(--color-accent-green);
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,74 @@
+---
+import type { Locale, Translations } from '../utils/i18n';
+import { buildWhatsAppUrl } from '../utils/whatsapp';
+
+interface Props {
+  locale: Locale;
+  t: Translations;
+}
+
+const { locale, t } = Astro.props;
+const locales: { code: Locale; label: string }[] = [
+  { code: 'hy', label: t['nav.lang.hy'] },
+  { code: 'ru', label: t['nav.lang.ru'] },
+  { code: 'en', label: t['nav.lang.en'] },
+];
+const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <nav class="lang" aria-label="Language">
+      {locales.map(({ code, label }) => (
+        <a
+          href={`/${code}/`}
+          class:list={['lang__link', { 'lang__link--active': code === locale }]}
+          hreflang={code}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+    <a href={waUrl} class="btn btn--whatsapp header__cta" target="_blank" rel="noopener noreferrer">
+      {t['nav.cta']}
+    </a>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(44, 36, 25, 0.85);
+    backdrop-filter: blur(8px);
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .lang {
+    display: flex;
+    gap: 1rem;
+  }
+  .lang__link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+  .lang__link--active {
+    color: var(--color-gold);
+    border-bottom: 2px solid var(--color-gold);
+  }
+  .header__cta {
+    padding: 0.5rem 1rem;
+    font-size: var(--text-xs);
+  }
+</style>

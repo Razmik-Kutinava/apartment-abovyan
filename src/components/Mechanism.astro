@@ -1,0 +1,14 @@
+---
+import type { Translations } from '../utils/i18n';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+---
+
+<section class="section section--surface">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['mechanism.title']}</h2>
+      <p class="section__lead">{t['mechanism.text']}</p>
+    </div>
+  </div>
+</section>

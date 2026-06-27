@@ -1,0 +1,54 @@
+---
+import type { Translations } from '../utils/i18n';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+
+const cards = [
+  { key: 'atis', image: '/images/mount-atist.png', alt: t['img.atist.alt'] },
+  { key: 'adventure', image: null, alt: null },
+  { key: 'church', image: '/images/church-st-john-01.png', alt: t['img.church.alt'] },
+  { key: 'logistics', image: null, alt: null },
+] as const;
+---
+
+<section class="section section--surface" id="location">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['location.title']}</h2>
+      <p class="section__lead">{t['location.subtitle']}</p>
+    </div>
+    <div class="card-grid card-grid--2">
+      {cards.map(({ key, image, alt }) => (
+        <article class="location-card">
+          {image && (
+            <div class="location-card__img">
+              <img src={image} alt={alt ?? ''} loading="lazy" width="400" height="240" />
+            </div>
+          )}
+          <div class="location-card__body">
+            <h3>{t[`nearby.${key}.title`]}</h3>
+            <p>{t[`nearby.${key}.text`]}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .location-card {
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+  .location-card__img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .location-card__body {
+    padding: var(--space-md);
+  }
+  .location-card__body p:last-child { margin: 0; }
+</style>

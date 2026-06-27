@@ -1,0 +1,79 @@
+---
+import type { Translations } from '../utils/i18n';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+
+const rooms = [
+  { id: 'living', x: 160, y: 20, w: 220, h: 130, color: '#C4654A' },
+  { id: 'bed1', x: 160, y: 160, w: 100, h: 80, color: '#4A6741' },
+  { id: 'bed2', x: 60, y: 25, w: 90, h: 55, color: '#4A6741' },
+  { id: 'bed3', x: 20, y: 20, w: 120, h: 80, color: '#4A6741' },
+  { id: 'hall', x: 120, y: 100, w: 40, h: 100, color: '#8B7355' },
+  { id: 'kitchen', x: 20, y: 110, w: 90, h: 50, color: '#C9A962' },
+  { id: 'bath', x: 20, y: 170, w: 50, h: 40, color: '#8B7355' },
+  { id: 'wc', x: 75, y: 170, w: 35, h: 40, color: '#8B7355' },
+] as const;
+---
+
+<section class="section" id="floorplan">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['floorplan.title']}</h2>
+      <p class="section__lead">{t['floorplan.note']}</p>
+    </div>
+    <div class="floorplan">
+      <svg viewBox="0 0 400 260" class="floorplan__svg" xmlns="http://www.w3.org/2000/svg" aria-label={t['floorplan.title']}>
+        {rooms.map((room) => (
+          <g class="floorplan__room">
+            <rect
+              x={room.x} y={room.y} width={room.w} height={room.h}
+              fill={room.color} fill-opacity="0.2" stroke={room.color} stroke-width="2" rx="4"
+            />
+            <text
+              x={room.x + room.w / 2} y={room.y + room.h / 2}
+              text-anchor="middle" dominant-baseline="middle"
+              font-size="10" fill="#2C2419"
+            >
+              {t[`floorplan.room.${room.id}`]}
+            </text>
+          </g>
+        ))}
+      </svg>
+      <ul class="floorplan__legend">
+        {rooms.map((room) => (
+          <li><span style={`background:${room.color}`}></span>{t[`floorplan.room.${room.id}`]}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .floorplan__svg {
+    width: 100%;
+    max-width: 640px;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: var(--space-sm);
+    box-shadow: var(--shadow);
+  }
+  .floorplan__legend {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+  }
+  .floorplan__legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .floorplan__legend span {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+  }
+</style>

@@ -1,0 +1,36 @@
+---
+import type { Translations } from '../utils/i18n';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+const items = [1, 2, 3] as const;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['consequences.title']}</h2>
+    </div>
+    <ul class="consequences">
+      {items.map((n) => (
+        <li class="consequences__item">{t[`consequences.${n}`]}</li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .consequences {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--space-sm);
+  }
+  .consequences__item {
+    padding: var(--space-md);
+    background: var(--color-surface);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    box-shadow: var(--shadow);
+  }
+</style>

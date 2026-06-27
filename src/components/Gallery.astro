@@ -1,0 +1,58 @@
+---
+import type { Translations } from '../utils/i18n';
+
+interface Props { t: Translations; }
+const { t } = Astro.props;
+
+const images = [
+  { src: '/images/gallery/01-loggia.jpg', alt: t['img.gallery.01.alt'] },
+  { src: '/images/gallery/02-living.jpg', alt: t['img.gallery.02.alt'] },
+  { src: '/images/gallery/03-living-wide.jpg', alt: t['img.gallery.03.alt'] },
+  { src: '/images/gallery/04-bedroom.jpg', alt: t['img.gallery.04.alt'] },
+  { src: '/images/gallery/05-bedroom-light.jpg', alt: t['img.gallery.05.alt'] },
+  { src: '/images/gallery/06-balcony.jpg', alt: t['img.gallery.06.alt'] },
+  { src: '/images/gallery/07-hallway.jpg', alt: 'Hallway' },
+  { src: '/images/gallery/08-kitchen.jpg', alt: 'Kitchen' },
+];
+---
+
+<section class="section section--surface" id="gallery">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['gallery.title']}</h2>
+      <p class="section__lead">{t['gallery.subtitle']}</p>
+    </div>
+    <div class="gallery" role="region" aria-label={t['gallery.title']}>
+      {images.map((img) => (
+        <figure class="gallery__slide">
+          <img src={img.src} alt={img.alt} loading="lazy" width="800" height="600" />
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery {
+    display: flex;
+    gap: var(--space-sm);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--container-padding);
+    padding-bottom: var(--space-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery__slide {
+    flex: 0 0 min(85vw, 480px);
+    scroll-snap-align: start;
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .gallery__slide img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+</style>

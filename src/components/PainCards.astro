@@ -1,0 +1,40 @@
+---
+import type { Translations } from '../utils/i18n';
+
+interface Props { t: Translations; }
+const { t } = Astro.props;
+const pains = [1, 2, 3] as const;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['pains.title']}</h2>
+    </div>
+    <div class="card-grid card-grid--3">
+      {pains.map((n) => (
+        <article class="card pain-card">
+          <span class="pain-card__num">{n}</span>
+          <h3>{t[`pains.${n}.title`]}</h3>
+          <p>{t[`pains.${n}.text`]}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pain-card__num {
+    display: inline-flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(196, 101, 74, 0.15);
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+  .pain-card p:last-child { margin-bottom: 0; }
+</style>

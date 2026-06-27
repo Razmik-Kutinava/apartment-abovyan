@@ -1,0 +1,45 @@
+---
+import type { Translations } from '../utils/i18n';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+const items = [1, 2, 3, 4, 5] as const;
+---
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['faq.title']}</h2>
+    </div>
+    <div class="faq">
+      {items.map((n) => (
+        <details class="faq__item">
+          <summary>{t[`faq.${n}.q`]}</summary>
+          <p>{t[`faq.${n}.a`]}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    display: grid;
+    gap: var(--space-sm);
+    max-width: 720px;
+  }
+  .faq__item {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: var(--space-md);
+    box-shadow: var(--shadow);
+  }
+  .faq__item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  .faq__item p {
+    margin-top: var(--space-sm);
+    color: var(--color-text-muted);
+  }
+</style>

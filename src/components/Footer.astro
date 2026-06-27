@@ -1,0 +1,44 @@
+---
+import type { Translations } from '../utils/i18n';
+import { buildWhatsAppUrl } from '../utils/whatsapp';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__address">{t['footer.address']}</p>
+    <a href={`tel:${t['footer.phone'].replace(/\s/g, '')}`} class="footer__phone">{t['footer.phone']}</a>
+    <a href={waUrl} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
+      {t['footer.cta']}
+    </a>
+    <p class="footer__copy">{t['footer.copyright']}</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-bg-dark);
+    color: rgba(255, 255, 255, 0.85);
+    padding: var(--space-xl) 0;
+  }
+  .footer__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  .footer__phone {
+    color: var(--color-gold);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .footer__copy {
+    margin-top: var(--space-md);
+    font-size: var(--text-sm);
+    opacity: 0.6;
+  }
+</style>

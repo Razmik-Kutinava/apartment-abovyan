@@ -1,0 +1,37 @@
+---
+import type { Translations } from '../utils/i18n';
+interface Props { t: Translations; }
+const { t } = Astro.props;
+const specs = ['address', 'area', 'floor', 'view', 'balcony', 'condition', 'parquet'] as const;
+---
+
+<section class="section section--surface" id="solution">
+  <div class="container">
+    <div class="section__header">
+      <h2>{t['solution.title']}</h2>
+      <p class="section__lead">{t['solution.intro']}</p>
+    </div>
+    <div class="specs">
+      {specs.map((key) => (
+        <div class="specs__item">{t[`spec.${key}`]}</div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .specs {
+    display: grid;
+    gap: var(--space-sm);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) {
+    .specs { grid-template-columns: repeat(2, 1fr); }
+  }
+  .specs__item {
+    padding: var(--space-md);
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    font-size: var(--text-base);
+  }
+</style>
