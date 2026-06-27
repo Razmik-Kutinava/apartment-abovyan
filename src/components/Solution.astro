@@ -11,6 +11,7 @@ const specs = ['address', 'area', 'floor', 'view', 'balcony', 'condition', 'parq
       <h2>{t['solution.title']}</h2>
       <p class="section__lead">{t['solution.intro']}</p>
     </div>
+    <h3 class="specs__title">{t['solution.specs_title']}</h3>
     <div class="specs">
       {specs.map((key) => (
         <div class="specs__item">{t[`spec.${key}`]}</div>
@@ -20,6 +21,11 @@ const specs = ['address', 'area', 'floor', 'view', 'balcony', 'condition', 'parq
 </section>
 
 <style>
+  .specs__title {
+    margin: 0 0 var(--space-md);
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+  }
   .specs {
     display: grid;
     gap: var(--space-sm);

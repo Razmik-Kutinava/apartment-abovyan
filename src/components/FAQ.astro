@@ -13,7 +13,9 @@ const items = [1, 2, 3, 4, 5] as const;
     <div class="faq">
       {items.map((n) => (
         <details class="faq__item">
-          <summary>{t[`faq.${n}.q`]}</summary>
+          <summary>
+            <h3 class="faq__question">{t[`faq.${n}.q`]}</h3>
+          </summary>
           <p>{t[`faq.${n}.a`]}</p>
         </details>
       ))}
@@ -35,6 +37,15 @@ const items = [1, 2, 3, 4, 5] as const;
   }
   .faq__item summary {
     cursor: pointer;
+    list-style: none;
+  }
+  .faq__item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq__question {
+    display: inline;
+    margin: 0;
+    font-size: var(--text-base);
     font-weight: 600;
     font-family: 'Montserrat', system-ui, sans-serif;
   }

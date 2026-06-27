@@ -134,6 +134,12 @@ Flat keys с dot notation — простота, без nested objects.
 
 ---
 
+## SEO и маркетинг по языкам
+
+Полный чек-лист (hreflang, ключевые слова, что показывать РФ/СНГ vs EN) — [11-marketing-seo.md](./11-marketing-seo.md).
+
+---
+
 ## Default locale detection (optional, phase 2)
 
 ```javascript

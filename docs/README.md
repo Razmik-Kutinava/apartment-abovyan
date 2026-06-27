@@ -17,9 +17,10 @@
 | 5 | [05-floor-plan.md](./05-floor-plan.md) | Планировка квартиры (реконструкция по фото) + SVG-макет для вёрстки |
 | 6 | [06-tech-spec-astro.md](./06-tech-spec-astro.md) | Архитектура Astro: структура, i18n, деплой, производительность |
 | 7 | [07-i18n-spec.md](./07-i18n-spec.md) | Спецификация мультиязычности (ru / hy / en) |
-| 8 | [08-seo-meta.md](./08-seo-meta.md) | SEO, Open Graph, WhatsApp-превью, аналитика |
+| 8 | [08-seo-meta.md](./08-seo-meta.md) | SEO: шаблоны meta, OG, JSON-LD (техническая справка) |
 | 9 | [09-building-heritage.md](./09-building-heritage.md) | «Заводской дом» Элара — что писать на ленде, что не писать |
 | 10 | [10-deploy-vercel.md](./10-deploy-vercel.md) | **Деплой:** Vercel + GitHub, домен, env |
+| 11 | [11-marketing-seo.md](./11-marketing-seo.md) | **Маркетинг и SEO:** что есть, что сделать, мастер-чек-лист |
 | — | [i18n/ru.json](./i18n/ru.json) | **Готовый JSON** — русский (copy → `src/i18n/`) |
 | — | [i18n/en.json](./i18n/en.json) | **Готовый JSON** — английский |
 | — | [i18n/hy.json](./i18n/hy.json) | **Черновик JSON** — армянский (нужна проверка носителем) |
@@ -52,6 +53,7 @@ WhatsApp:    +37477271488
 6. Вставить SVG-планировку из [05-floor-plan.md](./05-floor-plan.md)
 7. Настроить i18n по [07-i18n-spec.md](./07-i18n-spec.md)
 8. Добавить meta/OG по [08-seo-meta.md](./08-seo-meta.md)
+9. Закрыть маркетинг по чек-листу [11-marketing-seo.md](./11-marketing-seo.md)
 
 ---
 

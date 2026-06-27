@@ -2,13 +2,16 @@
   "meta.title": "78 m² Apartment in Abovyan — Mount Atis View | $92,000",
   "meta.description": "3 bedrooms + living room, 4th floor. Direct owner sale. Christ monument on Mount Atis nearby. WhatsApp: +37477271488",
 
+  "schema.website.name": "Garni 10 — Abovyan Apartment",
+  "schema.listing.name": "78 m² Apartment, 10 Garni St., Abovyan",
+
   "nav.lang.ru": "RUS",
   "nav.lang.hy": "ARM",
   "nav.lang.en": "ENG",
   "nav.cta": "Message",
 
   "hero.badge": "Direct Sale · No Agents",
-  "hero.title": "An Apartment with a View of the Future",
+  "hero.title": "78 m² Apartment in Abovyan with Mount Atis View",
   "hero.subtitle": "Abovyan, 10 Garni St. — 4th floor, 78 m²",
   "hero.benefit": "Buy a home next to Armenia's next landmark — the Christ monument on Mount Atis, set to transform the region into a pilgrimage and tourism hub",
   "hero.urgency": "The only unit for sale in this building. Direct from owner — zero agent fees",
@@ -33,6 +36,7 @@
   "consequences.3": "You'll miss buying directly from the owner with no markup",
 
   "solution.title": "This Apartment Is the Answer",
+  "solution.specs_title": "Specifications",
   "solution.intro": "78 m² of spacious layout on the 4th floor of a 5-story building. Quiet green neighborhood, real views, honest photos.",
   "spec.address": "📍 Abovyan, 10 Garni St.",
   "spec.area": "📐 78 m² — 3 bedrooms + living room",

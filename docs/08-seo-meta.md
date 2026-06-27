@@ -1,5 +1,8 @@
 # 08 — SEO & Meta
 
+> **Главный документ по маркетингу:** [11-marketing-seo.md](./11-marketing-seo.md) — полный аудит «есть/нет», чек-листы, порядок работ.  
+> Этот файл — **техническая справка**: шаблоны тегов и JSON-LD для внедрения в код.
+
 ## Primary keywords (per locale)
 
 ### HY (диаспора)
@@ -116,7 +119,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DOMAIN/sitemap.xml
+Sitemap: https://DOMAIN/sitemap-index.xml
 ```
 
 ---

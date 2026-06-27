@@ -260,7 +260,8 @@ dist/
 - [ ] WhatsApp links работают на всех языках
 - [ ] OG image создан (1200×630)
 - [ ] favicon добавлен
-- [ ] sitemap.xml генерируется
+- [ ] sitemap-index.xml генерируется
 - [ ] hreflang tags на всех страницах
 - [ ] Mobile sticky WhatsApp работает
 - [ ] Lighthouse ≥ 95
+- [ ] Маркетинг и SEO — мастер-чек-лист [11-marketing-seo.md](./11-marketing-seo.md)

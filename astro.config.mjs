@@ -17,9 +17,13 @@ export default defineConfig({
     },
   },
   redirects: {
-    '/': '/hy/',
+    '/': { status: 301, destination: '/hy/' },
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      lastmod: new Date(),
+    }),
+  ],
   build: {
     inlineStylesheets: 'auto',
   },

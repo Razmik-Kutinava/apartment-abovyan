@@ -1,5 +1,7 @@
 ---
 import type { Locale } from '../utils/i18n';
+import { getTranslations } from '../utils/i18n';
+import { buildStructuredData } from '../utils/structured-data';
 import '../styles/global.css';
 
 interface Props {
@@ -9,10 +11,27 @@ interface Props {
 }
 
 const { locale, title, description } = Astro.props;
+const t = getTranslations(locale);
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 const canonical = `${siteUrl}/${locale}/`;
 const locales: Locale[] = ['hy', 'ru', 'en'];
-const ogLocale = locale === 'hy' ? 'hy_AM' : locale === 'ru' ? 'ru_RU' : 'en_US';
+
+const hreflangMap: Record<Locale, string[]> = {
+  hy: ['hy', 'hy-AM'],
+  ru: ['ru', 'ru-RU'],
+  en: ['en', 'en-US'],
+};
+
+const ogLocaleMap: Record<Locale, string> = {
+  hy: 'hy_AM',
+  ru: 'ru_RU',
+  en: 'en_US',
+};
+
+const ogLocale = ogLocaleMap[locale];
+const ogLocaleAlternates = locales.filter((loc) => loc !== locale).map((loc) => ogLocaleMap[loc]);
+const structuredData = buildStructuredData({ locale, siteUrl, pageUrl: canonical, t });
+const siteName = t['schema.website.name'];
 ---
 
 <!doctype html>
@@ -23,20 +42,29 @@ const ogLocale = locale === 'hy' ? 'hy_AM' : locale === 'ru' ? 'ru_RU' : 'en_US'
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {locales.map((loc) => (
-      <link rel="alternate" hreflang={loc} href={`${siteUrl}/${loc}/`} />
-    ))}
+    {locales.flatMap((loc) =>
+      hreflangMap[loc].map((code) => (
+        <link rel="alternate" hreflang={code} href={`${siteUrl}/${loc}/`} />
+      )),
+    )}
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/hy/`} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocale} />
+    {ogLocaleAlternates.map((alt) => (
+      <meta property="og:locale:alternate" content={alt} />
+    ))}
     <meta property="og:image" content={`${siteUrl}/images/og-preview.jpg`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${siteUrl}/images/og-preview.jpg`} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

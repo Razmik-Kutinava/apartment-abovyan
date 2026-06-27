@@ -70,6 +70,7 @@ npm run preview   # http://localhost:4321
 - [ ] WhatsApp CTA ведёт на `+37477271488`
 - [ ] OG-превью: `/images/og-preview.jpg` (1200×630)
 - [ ] `sitemap-index.xml` доступен
+- [ ] Дальше: чек-лист маркетинга → [11-marketing-seo.md](./11-marketing-seo.md) (GSC, Яндекс, доски)
 - [ ] HTTPS включён (Vercel по умолчанию)
 
 ---
