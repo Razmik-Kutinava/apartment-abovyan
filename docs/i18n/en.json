@@ -42,6 +42,14 @@
   "spec.condition": "🔧 Needs cosmetic renovation — blank canvas for your design",
   "spec.parquet": "🪵 Classic herringbone parquet — solid foundation",
 
+  "building.title": "A Home with History — Built to Last",
+  "building.1.title": "1960s–70s Industrial-Era Construction",
+  "building.1.text": "Classic Soviet institutional housing in industrial Abovyan: solid walls, generous layouts, herringbone parquet — a strong foundation for modern renovation.",
+  "building.2.title": "Elar Quarter",
+  "building.2.text": "Garni Street sits in historic Elar — established infrastructure with schools, shops, and transport within walking distance.",
+  "building.3.title": "Private Ownership",
+  "building.3.text": "Fully privatized — a standard private sale directly from the owner, no agent fees.",
+
   "distances.title": "Everything Nearby — On Foot",
   "distances.center": "City center (Andranik St.): ~500–600 m, 6–7 min walk",
   "distances.transport": "Bus stop: ~350 m, 4–5 min (Sevan / Pioneerakan St.)",
@@ -93,6 +101,8 @@
   "faq.3.a": "The price reflects the tourism-growth location, 78 m² size, and zero agent fees. Open to negotiation for a quick deal.",
   "faq.4.q": "Are there other units for sale in the building?",
   "faq.4.a": "No. This is the only apartment for sale in the building — direct from the owner.",
+  "faq.5.q": "When was the building constructed? What does \"factory housing\" mean?",
+  "faq.5.a": "A 5-story institutional housing block from the 1960s–70s in the Elar quarter. In Abovyan, such buildings were erected for industrial workers — valued for solid construction and spacious layouts. Today it's a standard privatized apartment.",
 
   "footer.phone": "+374 77 271 488",
   "footer.cta": "Message on WhatsApp",

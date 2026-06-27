@@ -18,6 +18,7 @@
 | 6 | [06-tech-spec-astro.md](./06-tech-spec-astro.md) | Архитектура Astro: структура, i18n, деплой, производительность |
 | 7 | [07-i18n-spec.md](./07-i18n-spec.md) | Спецификация мультиязычности (ru / hy / en) |
 | 8 | [08-seo-meta.md](./08-seo-meta.md) | SEO, Open Graph, WhatsApp-превью, аналитика |
+| 9 | [09-building-heritage.md](./09-building-heritage.md) | «Заводской дом» Элара — что писать на ленде, что не писать |
 | — | [i18n/ru.json](./i18n/ru.json) | **Готовый JSON** — русский (copy → `src/i18n/`) |
 | — | [i18n/en.json](./i18n/en.json) | **Готовый JSON** — английский |
 | — | [i18n/hy.json](./i18n/hy.json) | **Черновик JSON** — армянский (нужна проверка носителем) |
