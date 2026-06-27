@@ -4,3 +4,6 @@ dist/
 .env
 *.HEIC
 .DS_Store
+
+# Исходники фото — в репо только public/images/
+assets/
