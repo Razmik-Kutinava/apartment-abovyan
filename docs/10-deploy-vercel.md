@@ -79,6 +79,7 @@ npm run preview   # http://localhost:4321
 | Проблема | Решение |
 |----------|---------|
 | Build fail на sharp | На Vercel Linux sharp работает; локально win-arm64 — не критично |
+| EBADPLATFORM rollup-win32 | Не коммитить `@rollup/rollup-win32-arm64-msvc` — только для локального win-arm64 |
 | Неверный canonical | Проверить `SITE_URL` в Vercel env |
 | 404 на `/` | `vercel.json` redirect + Astro redirect |
 | Старый кэш | Vercel → Deployments → Redeploy |
