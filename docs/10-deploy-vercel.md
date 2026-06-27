@@ -53,13 +53,13 @@ npm run preview   # http://localhost:4321
 
 ## Чек-лист после первого деплоя
 
-- [ ] `/hy/` открывается
-- [ ] `/ru/`, `/en/` переключаются
-- [ ] WhatsApp CTA ведёт на `+37477271488`
-- [ ] OG-превью: `/images/og-preview.jpg` (1200×630)
-- [ ] `sitemap-index.xml` доступен
-- [ ] Дальше: чек-лист маркетинга → [11-marketing-seo.md](./11-marketing-seo.md) (GSC, Яндекс, доски)
-- [ ] HTTPS включён (Vercel по умолчанию)
+- [x] `/hy/` открывается
+- [x] `/ru/`, `/en/` переключаются
+- [x] WhatsApp CTA ведёт на `+37477271488`
+- [x] OG-превью: `/images/og-preview.jpg` (1200×630)
+- [x] `sitemap-index.xml` доступен
+- [x] GSC + Яндекс.Вебмастер: подтверждены, sitemap отправлен
+- [x] HTTPS включён (Vercel по умолчанию)
 
 ---
 

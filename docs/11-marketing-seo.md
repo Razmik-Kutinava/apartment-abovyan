@@ -48,9 +48,9 @@
 | Alt-тексты фото | ✅ Готово | 16 ключей на каждый язык в i18n |
 | JSON-LD (Schema.org) | ✅ Готово | WebSite + RealEstateListing + FAQPage |
 | FAQ rich snippets | ✅ Готово | FAQPage schema + h3 на вопросах |
-| Деплой production | ❌ Нет | TASK-003, Vercel |
-| Google Search Console | ❌ Нет | Ручная настройка после деплоя |
-| Яндекс.Вебмастер | ❌ Нет | Важно для РФ/СНГ |
+| Деплой production | ✅ Готово | apartment-abovyan.vercel.app |
+| Google Search Console | ✅ Готово | Подтверждён, sitemap отправлен |
+| Яндекс.Вебмастер | ✅ Готово | Подтверждён, sitemap отправлен |
 | Доски объявлений | ❌ Нет | list.am, myhome.am и др. |
 | Аналитика | ❌ Нет | Plausible/Umumi — phase 2 |
 
@@ -304,12 +304,12 @@ Sitemap: https://apartment-abovyan.vercel.app/sitemap-index.xml
 
 **Чек-лист** (детали в [10-deploy-vercel.md](./10-deploy-vercel.md)):
 
-- [ ] Import репозитория на Vercel
-- [ ] Env `SITE_URL` = финальный домен
+- [x] Import репозитория на Vercel
+- [x] Env `SITE_URL` = `https://apartment-abovyan.vercel.app`
 - [x] Production URL: `apartment-abovyan.vercel.app`
-- [ ] Проверить: `/hy/`, `/ru/`, `/en/` открываются
+- [x] Проверить: `/hy/`, `/ru/`, `/en/` открываются
+- [x] `robots.txt` — Sitemap на финальный URL
 - [ ] Проверить OG-превью: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) или аналог
-- [ ] Обновить `robots.txt` — Sitemap на финальный URL
 
 ---
 
@@ -319,8 +319,8 @@ Sitemap: https://apartment-abovyan.vercel.app/sitemap-index.xml
 
 ### Этап 0 — Блокер
 
-- [ ] **D1** Деплой на Vercel + домен + `SITE_URL`
-- [ ] **D2** Все изображения на production (hero, gallery, og-preview, location)
+- [x] **D1** Деплой на Vercel + `SITE_URL`
+- [x] **D2** Все изображения на production (hero, gallery, og-preview, location)
 
 ### Этап 1 — Критично для поиска (код)
 
@@ -333,10 +333,10 @@ Sitemap: https://apartment-abovyan.vercel.app/sitemap-index.xml
 
 ### Этап 2 — Регистрация в поисковиках
 
-- [ ] **C1** Google Search Console + sitemap
-- [ ] **C1** Яндекс.Вебмастер + sitemap
+- [x] **C1** Google Search Console + sitemap (`sitemap-index.xml`)
+- [x] **C1** Яндекс.Вебмастер + sitemap
 - [ ] **C1** Bing Webmaster (опционально)
-- [ ] **C1** Проверка hreflang и индексации через 7–14 дней
+- [ ] **C1** Проверка индексации через 7–14 дней (`site:apartment-abovyan.vercel.app`)
 
 ### Этап 3 — Трафик с площадок
 
@@ -387,4 +387,4 @@ OG image:  /images/og-preview.jpg
 | Дата | Что |
 |------|-----|
 | 2026-06-27 | Создан документ: аудит «есть/нет», чек-листы, мастер-план |
-| 2026-06-27 | Этап 1 (код): JSON-LD, meta, H1, FAQ h3, robots.ts, 301 |
+| 2026-06-27 | GSC + Яндекс: верификация, sitemap, SEO-ядро закрыто |
