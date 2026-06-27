@@ -4,7 +4,7 @@
 
 | ID | Задача | Статус | Файл |
 |----|--------|--------|------|
-| TASK-001 | Astro-лендинг Garni 10 — полная реализация | in_progress | [tasks/TASK-001-landing-astro.md](./tasks/TASK-001-landing-astro.md) |
+| TASK-001 | Astro-лендинг Garni 10 — полная реализация | done | [tasks/TASK-001-landing-astro.md](./tasks/TASK-001-landing-astro.md) |
 
 ## Не сделано (хвосты)
 
@@ -20,3 +20,4 @@
 | ID | Задача | Дата |
 |----|--------|------|
 | — | Подготовка docs/ (бриф, контент, дизайн) | 2026-06-27 |
+| TASK-001 | Astro-лендинг MVP локально | 2026-06-27 |

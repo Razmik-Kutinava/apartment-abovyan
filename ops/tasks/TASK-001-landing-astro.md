@@ -1,6 +1,6 @@
 # TASK-001 — Astro-лендинг Garni 10
 
-**Статус:** in_progress  
+**Статус:** done (MVP локально)  
 **Создан:** 2026-06-27
 
 ---
@@ -37,15 +37,15 @@
 
 ## Чек-лист этапов
 
-- [ ] 1. Cursor rule + ops/ структура
-- [ ] 2. Astro scaffold (package, config, layout, styles)
-- [ ] 3. i18n + utils + config
-- [ ] 4. Компоненты секций ленда
-- [ ] 5. Страницы hy / ru / en + redirect /
-- [ ] 6. Assets → public/images
-- [ ] 7. npm run build успешен
-- [ ] 8. npm run dev — ленд открывается
-- [ ] 9. Journal + backlog обновлены
+- [x] 1. Cursor rule + ops/ структура
+- [x] 2. Astro scaffold (package, config, layout, styles)
+- [x] 3. i18n + utils + config
+- [x] 4. Компоненты секций ленда
+- [x] 5. Страницы hy / ru / en + redirect /
+- [x] 6. Assets → public/images
+- [x] 7. npm run build успешен
+- [x] 8. npm run dev — ленд открывается
+- [x] 9. Journal + backlog обновлены
 
 ---
 
@@ -53,17 +53,17 @@
 
 | Область | Было | Стало |
 |---------|------|-------|
-| Код | Только docs/ | — |
-| Cursor rule | Нет | — |
-| ops/ | Нет | — |
-| Лендинг локально | Нет | — |
+| Код | Только docs/ | Astro SSG, 16 компонентов, 3 локали |
+| Cursor rule | Нет | `.cursor/rules/task-workflow.mdc` |
+| ops/ | Нет | backlog, tasks, journal |
+| Лендинг локально | Нет | http://localhost:4321/hy/ |
 
 ---
 
 ## Прогоны
 
-### Прогон 1 — (в процессе)
+### Прогон 1 — завершён
 
-**Сделано:** —  
-**Не сделано:** —  
-**Коммиты:** —
+**Сделано:** rule, ops, полный лендинг, build, dev  
+**Не сделано:** HY native, HEIC, OG image, deploy, скрины  
+**Коммиты:** d9d692d → cf6c17d
