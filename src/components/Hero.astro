@@ -1,7 +1,6 @@
 ---
 import type { Translations } from '../utils/i18n';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
-import heroVideo from '../../assets/video/abovyan_garni.mp4';
 
 interface Props { t: Translations; }
 const { t } = Astro.props;
@@ -12,7 +11,7 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
   <div class="hero__bg" role="img" aria-label={t['img.hero.alt']}>
     <video
       class="hero__video"
-      src={heroVideo}
+      src="/video/abovyan_garni.mp4"
       poster="/images/hero-atist-monument.jpg"
       autoplay
       muted

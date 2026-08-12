@@ -24,12 +24,16 @@
 - [x] 3. Настроить `autoplay + muted + loop + playsinline` и `object-fit: cover`
 - [x] 4. Добавить fallback при `prefers-reduced-motion: reduce`
 - [x] 5. Прогнать `npm run build`
-- [ ] 6. Коммит логическим шагом
-- [ ] 7. Деплой на Vercel (через push/auto-deploy)
-- [ ] 8. Обновить `ops/journal/2026-08-12.md` и `ops/backlog.md`
+- [x] 6. Коммит логическим шагом
+- [x] 7. Деплой на Vercel (через push/auto-deploy)
+- [x] 8. Обновить `ops/journal/2026-08-12.md` и `ops/backlog.md`
 
 ## Было → Стало
 | Область | Было | Стало |
 |---------|------|-------|
 | Hero фон | статическая картинка `hero-atist-monument.jpg` | зацикленное видео `abovyan_garni.mp4` под оверлеем |
+
+## Прогон 1 — завершён
+**Коммит:** `ee121e1`  
+**Не сделано в этом прогоне:** нет.
 

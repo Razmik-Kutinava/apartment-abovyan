@@ -5,7 +5,6 @@
 | ID | Задача | Статус | Файл |
 |----|--------|--------|------|
 | — | Ожидание индексации Google/Яндекс (7–14 дней) | waiting | [11-marketing-seo](../docs/11-marketing-seo.md) |
-| TASK-004 | Hero: зацикленное видео в экране (abovyan_garni) | in_progress | [hero-video-loop](../ops/tasks/TASK-004-hero-video-loop.md) |
 
 ## Не сделано (хвосты)
 
@@ -24,6 +23,7 @@
 | TASK-002 | HY перевод + HEIC + OG 1200×630 | 2026-06-27 |
 | — | GitHub push → apartment-abovyan | 2026-06-27 |
 | TASK-003 | Деплой Vercel production | 2026-06-27 |
+| TASK-004 | Hero: зацикленное видео в экране (abovyan_garni) | 2026-08-12 |
 | — | SEO маркетинг (код): JSON-LD, meta, H1, robots | 2026-06-27 |
 | — | docs/11-marketing-seo.md | 2026-06-27 |
 | — | GSC: верификация + sitemap | 2026-06-27 |
