@@ -19,6 +19,7 @@ const addressByLocale = {
   ru: { street: 'ул. Гарни, 10', locality: 'Абовян', region: 'Котайк' },
   en: { street: '10 Garni Street', locality: 'Abovyan', region: 'Kotayk' },
   hy: { street: 'Garni 10', locality: 'Աբովյան', region: 'Կոտայք' },
+  fr: { street: '10 rue Garni', locality: 'Abovyan', region: 'Kotayk' },
 } as const satisfies Record<Locale, { street: string; locality: string; region: string }>;
 
 export function buildStructuredData(params: {

@@ -1,8 +1,9 @@
 import ru from '../i18n/ru.json';
 import hy from '../i18n/hy.json';
 import en from '../i18n/en.json';
+import fr from '../i18n/fr.json';
 
-const translations = { ru, hy, en } as const;
+const translations = { ru, hy, en, fr } as const;
 
 export type Locale = keyof typeof translations;
 export type Translations = Record<string, string>;

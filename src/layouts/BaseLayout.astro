@@ -14,18 +14,20 @@ const { locale, title, description } = Astro.props;
 const t = getTranslations(locale);
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? '';
 const canonical = `${siteUrl}/${locale}/`;
-const locales: Locale[] = ['hy', 'ru', 'en'];
+const locales: Locale[] = ['hy', 'ru', 'en', 'fr'];
 
 const hreflangMap: Record<Locale, string[]> = {
   hy: ['hy', 'hy-AM'],
   ru: ['ru', 'ru-RU'],
   en: ['en', 'en-US'],
+  fr: ['fr', 'fr-FR'],
 };
 
 const ogLocaleMap: Record<Locale, string> = {
   hy: 'hy_AM',
   ru: 'ru_RU',
   en: 'en_US',
+  fr: 'fr_FR',
 };
 
 const ogLocale = ogLocaleMap[locale];
