@@ -52,25 +52,31 @@ const { t } = Astro.props;
 <style>
   .hero {
     position: relative;
+    height: 100svh;
     min-height: 100svh;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    padding: 5rem var(--container-padding) var(--space-xl);
+    /* отступ под fixed header (~4.5rem) */
+    padding-top: 4.5rem;
+    padding-bottom: 0;
+    box-sizing: border-box;
     background: #111;
+    overflow: hidden;
   }
   .hero__media {
-    width: min(92vw, 720px);
-    max-height: 72svh;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .hero__video {
     display: block;
-    width: 100%;
-    height: auto;
-    max-height: 72svh;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
     object-fit: contain;
     pointer-events: none;
   }
