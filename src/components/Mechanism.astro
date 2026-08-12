@@ -1,4 +1,5 @@
 ---
+import { ATIS_SOURCES } from '../config';
 import type { Translations } from '../utils/i18n';
 interface Props { t: Translations; }
 const { t } = Astro.props;
@@ -9,6 +10,52 @@ const { t } = Astro.props;
     <div class="section__header">
       <h2>{t['mechanism.title']}</h2>
       <p class="section__lead">{t['mechanism.text']}</p>
+      <div class="mechanism-sources">
+        <p class="mechanism-sources__label">{t['mechanism.sources_label']}</p>
+        <ul class="mechanism-sources__list" role="list">
+          {ATIS_SOURCES.map(({ href, labelKey }) => (
+            <li>
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                {t[labelKey]}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .mechanism-sources {
+    margin-top: var(--space-md);
+    max-width: 640px;
+  }
+
+  .mechanism-sources__label {
+    margin: 0 0 0.5rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .mechanism-sources__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .mechanism-sources__list a {
+    color: var(--color-accent-green);
+    font-size: var(--text-sm);
+    line-height: 1.45;
+    text-underline-offset: 0.15em;
+  }
+
+  .mechanism-sources__list a:hover {
+    color: var(--color-primary);
+  }
+</style>
