@@ -18,7 +18,7 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
       muted
       loop
       playsinline
-      preload="metadata"
+      preload="auto"
       aria-hidden="true"
     ></video>
   </div>
@@ -35,6 +35,18 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
     <p class="hero__spoiler">{t['hero.spoiler']}</p>
   </div>
 </section>
+
+<script>
+  const heroVideo = document.querySelector('.hero__video');
+  if (heroVideo instanceof HTMLVideoElement) {
+    heroVideo.muted = true;
+    const playHeroVideo = () => {
+      heroVideo.play().catch(() => {});
+    };
+    heroVideo.addEventListener('canplay', playHeroVideo, { once: true });
+    playHeroVideo();
+  }
+</script>
 
 <style>
   .hero {
@@ -59,7 +71,8 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
+    z-index: 1;
+    pointer-events: none;
   }
   .hero__overlay {
     position: absolute;
@@ -98,6 +111,5 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
   }
   @media (prefers-reduced-motion: reduce) {
     .hero__bg { background-attachment: scroll; }
-    .hero__video { display: none; }
   }
 </style>
