@@ -5,6 +5,7 @@
 | ID | Задача | Статус | Файл |
 |----|--------|--------|------|
 | — | Ожидание индексации Google/Яндекс (7–14 дней) | waiting | [11-marketing-seo](../docs/11-marketing-seo.md) |
+| TASK-004 | Hero: зацикленное видео в экране (abovyan_garni) | in_progress | [hero-video-loop](../ops/tasks/TASK-004-hero-video-loop.md) |
 
 ## Не сделано (хвосты)
 
