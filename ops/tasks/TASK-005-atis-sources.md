@@ -38,5 +38,6 @@
 3. OC Media: https://oc-media.org/installation-of-armenias-monumental-jesus-statue-begins/
 
 ## Прогон 1 — завершён
-**Статус:** done (код готов, коммит/деплой — по запросу)  
-**Не сделано в этом прогоне:** git commit, деплой Vercel.
+**Статус:** done  
+**Коммит:** `fbc46fd` (pushed → Vercel auto-deploy)  
+**Не сделано в этом прогоне:** нет.
