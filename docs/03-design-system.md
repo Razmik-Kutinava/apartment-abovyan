@@ -96,10 +96,9 @@ background: linear-gradient(
 - Aspect ratio 4:3
 
 ### 4. Gallery Slider
-- Swipeable на mobile (touch)
-- Lightbox по клику
-- Thumbnails strip внизу
-- Lazy loading + WebP
+- Один блок «фото квартиры», внутри 3 компактные группы: вход / кухня+зал / спальни
+- По 2 фото в группе, сетка, без высокой карусели
+- Lazy loading
 
 ### 5. Specs Grid
 - 2×3 grid иконок (адрес, площадь, этаж, вид, балкон, состояние)

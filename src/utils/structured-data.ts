@@ -4,15 +4,12 @@ import type { Locale, Translations } from './i18n';
 const FAQ_ITEMS = [1, 2, 3, 4, 5] as const;
 
 const GALLERY_IMAGES = [
-  '01-loggia.jpg',
-  '02-living.jpg',
-  '03-living-wide.jpg',
-  '04-bedroom.jpg',
-  '05-bedroom-light.jpg',
-  '06-balcony.jpg',
   '07-hallway.jpg',
+  '10-hallway-2.jpg',
+  '02-living.jpg',
   '08-kitchen.jpg',
-  '09-view.jpg',
+  '05-bedroom-light.jpg',
+  '04-bedroom.jpg',
 ] as const;
 
 const addressByLocale = {

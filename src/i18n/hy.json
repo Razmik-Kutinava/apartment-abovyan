@@ -79,6 +79,9 @@
 
   "gallery.title": "Իրական լուսանկարներ — առանց ֆիլտրերի",
   "gallery.subtitle": "Ինչ տեսնում եք — դա էլ եք գնում",
+  "gallery.group.entrance": "Մուտք",
+  "gallery.group.living": "Խոհանոց + սրահ",
+  "gallery.group.bedrooms": "Ննջարաններ",
 
   "floorplan.title": "78 քմ հատակագիծ",
   "floorplan.note": "Բնակարանի պաշտոնական հատակագիծ։",
@@ -132,6 +135,7 @@
   "img.gallery.06.alt": "Պատշգամբ, տեսարան կանաչության և քաղաքի",
   "img.gallery.07.alt": "Մուտքի դահլիճ, պարկետ",
   "img.gallery.08.alt": "Խոհանոց",
+  "img.gallery.10.alt": "Մուտք, բացվածքներ դեպի սենյակներ",
   "img.gallery.09.alt": "Տեսարան պատուհանից — Աթիզ լեռ",
   "img.floorplan.alt": "78 քմ բնակարանի հատակագիծ, Garni 10, Աբովյան"
 }

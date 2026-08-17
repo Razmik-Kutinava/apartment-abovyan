@@ -151,7 +151,7 @@
 | Файл / зона | Alt | Примечание |
 |-------------|-----|------------|
 | Hero | ✅ aria-label | Фон через CSS — Google Images слабо индексирует |
-| Gallery ×9 | ✅ | lazy load, width/height |
+| Gallery ×6 | ✅ | lazy load, width/height, 3 группы |
 | Location ×4 | ✅ | lazy load |
 | og-preview.jpg | — | 1200×630 для соцсетей |
 

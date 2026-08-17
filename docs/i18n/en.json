@@ -70,6 +70,9 @@
 
   "gallery.title": "Real Photos — No Filters",
   "gallery.subtitle": "What you see is what you get",
+  "gallery.group.entrance": "Entrance",
+  "gallery.group.living": "Kitchen + living room",
+  "gallery.group.bedrooms": "Bedrooms",
 
   "floorplan.title": "78 m² Floor Plan",
   "floorplan.note": "Reconstructed from actual photos. Official plan available on request.",

@@ -126,6 +126,9 @@
 |-----|----|----|-----|
 | `gallery.title` | Реальные фото — без фильтров | Реальные фото — без фильтров | Real Photos — No Filters |
 | `gallery.subtitle` | Что видите — то и покупаете | Что видите — то и покупаете | What you see is what you get |
+| `gallery.group.entrance` | Вход | Մուտք | Entrance |
+| `gallery.group.living` | Кухня + зал | Խոհանոց + սրահ | Kitchen + living room |
+| `gallery.group.bedrooms` | Спальни | Ննջարաններ | Bedrooms |
 
 ---
 

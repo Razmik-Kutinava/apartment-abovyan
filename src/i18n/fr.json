@@ -79,6 +79,9 @@
 
   "gallery.title": "Photos réelles — sans filtres",
   "gallery.subtitle": "Ce que vous voyez est ce que vous achetez",
+  "gallery.group.entrance": "Entrée",
+  "gallery.group.living": "Cuisine + salon",
+  "gallery.group.bedrooms": "Chambres",
 
   "floorplan.title": "Plan 78 m²",
   "floorplan.note": "Plan officiel de l’appartement.",
@@ -132,6 +135,7 @@
   "img.gallery.06.alt": "Balcon, vue sur la verdure et la ville",
   "img.gallery.07.alt": "Entrée, parquet",
   "img.gallery.08.alt": "Cuisine",
+  "img.gallery.10.alt": "Entrée, ouvertures vers les pièces",
   "img.gallery.09.alt": "Vue depuis la fenêtre — mont Atis",
   "img.floorplan.alt": "Plan de l’appartement 78 m², 10 rue Garni, Abovyan"
 }
