@@ -166,15 +166,17 @@
 
 | key | ru | hy | en |
 |-----|----|----|-----|
-| `faq.title` | Частые вопросы | Частые вопросы | FAQ |
-| `faq.1.q` | Можно ли купить, находясь за границей? | Можно ли купить, находясь за границей? | Can I buy from abroad? |
-| `faq.1.a` | Да. Проведём видео-показ, поможем с документами. Многие покупатели из диаспоры оформляют дистанционно через доверенность. | Да. Проведём видео-показ, поможем с документами. Многие покупатели из диаспоры оформляют дистанционно через доверенность. | Yes. We'll do a video tour and help with paperwork. Many diaspora buyers complete the purchase remotely via power of attorney. |
-| `faq.2.q` | Какой состояние квартиры? | Какой состояние квартиры? | What's the condition? |
-| `faq.2.a` | Квартира в живом состоянии, но требует косметического ремонта. Паркет, стены, коммуникации — solid Soviet-era bones с потенциалом под современный дизайн. | Квартира в живом состоянии, но требует косметического ремонта. Паркет, стены, коммуникации — solid Soviet-era bones с потенциалом под современный дизайн. | Livable but needs cosmetic renovation. Parquet, walls, utilities — solid Soviet-era bones ready for a modern makeover. |
-| `faq.3.q` | Почему цена $92 000? | Почему цена $92 000? | Why $92,000? |
-| `faq.3.a` | Цена отражает локацию с туристическим потенциалом, площадь 78 м² и прямую продажу без комиссий. При быстром решении — обсуждаем торг. | Цена отражает локацию с туристическим потенциалом, площадь 78 м² и прямую продажу без комиссий. При быстром решении — обсуждаем торг. | The price reflects the tourism-growth location, 78 m² size, and zero agent fees. Open to negotiation for a quick deal. |
-| `faq.4.q` | Есть ли другие квартиры в доме на продажу? | Есть ли другие квартиры в доме на продажу? | Are there other units for sale in the building? |
-| `faq.4.a` | Нет. Это единственная квартира на продажу в этом доме — прямая продажа от собственника. | Нет. Это единственная квартира на продажу в этом доме — прямая продажа от собственника. | No. This is the only apartment for sale in the building — direct from the owner. |
+| `faq.title` | Частые вопросы | Հաճախակի հարցեր | FAQ |
+| `faq.1.q` | Можно ли купить, находясь за границей? | Կարո՞ղ եմ գնել արտասահմանից | Can I buy from abroad? |
+| `faq.1.a` | Да, нужен представитель. | Այո, պետք է ներկայացուցիչ։ | Yes, you need a representative. |
+| `faq.2.q` | Какое состояние квартиры? | Ինչ վիճակում է բնակարանը | What's the condition of the apartment? |
+| `faq.2.a` | Требует косметического ремонта. | Պահանջում է կոսմետիկ վերանորոգում։ | It needs cosmetic renovation. |
+| `faq.3.q` | Почему 92 тыс $? | Ինչու՞ 92 հազար $ | Why $92k? |
+| `faq.3.a` | Рыночная цена квартиры, обусловленная скачком цены на данный объект недвижимости, имеющая выгодное географическое положение. | Շուկայական գին է, պայմանավորված այս օբյեկտի գնի աճով և ձեռնտու աշխարհագրական դիրքով։ | The market price of this apartment, driven by a price jump for this property and its favorable location. |
+| `faq.4.q` | Есть ли другие квартиры в этом доме на продажу? | Այլ բնակարաններ կա՞ն այս տանը վաճառքի | Are there other apartments for sale in this building? |
+| `faq.4.a` | На момент публикации — только эта. | Հրապարակման պահին՝ միայն սա։ | At the time of publication, only this one. |
+| `faq.5.q` | Какого года дом и что значит «заводской»? | Որ տարեթվի՞ տունն է և ինչ է նշանակում «գործարանային» | When was the building built, and what does “factory housing” mean? |
+| `faq.5.a` | 70-е годы. Стены из туфа: зимой тепло, летом медленно нагревается, кондиционер не нужен — всегда комфортно. | 70-ականներ։ Պատերը տուֆից են. ձմռանը տաք է, ամռանը դանդաղ է տաքանում, օդորակիչ պետք չէ — միշտ հարմարավետ է։ | 1970s. Tuff walls: warm in winter, slow to heat in summer, no air conditioning needed — always comfortable. |
 
 ---
 

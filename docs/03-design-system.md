@@ -120,7 +120,8 @@ background: linear-gradient(
 
 ### 9. FAQ Accordion
 - `<details>` / `<summary>` — без JS
-- 4 вопроса
+- плюс справа у вопроса, в открытом виде — крестик
+- 5 вопросов
 
 ### 10. Footer
 - Минимум: телефон + WhatsApp + адрес
