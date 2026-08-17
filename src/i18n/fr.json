@@ -82,6 +82,10 @@
   "gallery.group.entrance": "Entrée",
   "gallery.group.living": "Cuisine + salon",
   "gallery.group.bedrooms": "Chambres",
+  "gallery.open": "Ouvrir la photo",
+  "gallery.close": "Fermer",
+  "gallery.prev": "Photo précédente",
+  "gallery.next": "Photo suivante",
 
   "floorplan.title": "Plan 78 m²",
   "floorplan.note": "Plan officiel de l’appartement.",

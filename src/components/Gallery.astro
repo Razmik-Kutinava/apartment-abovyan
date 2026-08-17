@@ -27,6 +27,8 @@ const groups = [
     ],
   },
 ] as const;
+
+let index = 0;
 ---
 
 <section class="section section--surface" id="gallery">
@@ -40,11 +42,21 @@ const groups = [
         <div class="gallery-group">
           <h3 class="gallery-group__title">{group.title}</h3>
           <div class="gallery-group__photos">
-            {group.images.map((img) => (
-              <figure class="gallery-group__figure">
-                <img src={img.src} alt={img.alt} loading="lazy" width="400" height="280" />
-              </figure>
-            ))}
+            {group.images.map((img) => {
+              const i = index++;
+              return (
+                <button
+                  type="button"
+                  class="gallery-group__open"
+                  data-index={i}
+                  data-src={img.src}
+                  data-alt={img.alt}
+                  aria-label={`${t['gallery.open']}: ${img.alt}`}
+                >
+                  <img src={img.src} alt={img.alt} loading="lazy" width="800" height="560" />
+                </button>
+              );
+            })}
           </div>
         </div>
       ))}
@@ -52,16 +64,83 @@ const groups = [
   </div>
 </section>
 
+<div class="gallery-lb" hidden>
+  <div class="gallery-lb__backdrop" data-close></div>
+  <div class="gallery-lb__dialog" role="dialog" aria-modal="true" aria-label={t['gallery.title']}>
+    <button type="button" class="gallery-lb__close" data-close aria-label={t['gallery.close']}>×</button>
+    <button type="button" class="gallery-lb__nav gallery-lb__nav--prev" data-prev aria-label={t['gallery.prev']}>‹</button>
+    <img class="gallery-lb__img" alt="" />
+    <button type="button" class="gallery-lb__nav gallery-lb__nav--next" data-next aria-label={t['gallery.next']}>›</button>
+    <p class="gallery-lb__caption"></p>
+  </div>
+</div>
+
+<script>
+  const root = document.querySelector('#gallery');
+  const lightbox = document.querySelector('.gallery-lb');
+  const lbImg = document.querySelector('.gallery-lb__img');
+  const lbCaption = document.querySelector('.gallery-lb__caption');
+  if (
+    root instanceof HTMLElement &&
+    lightbox instanceof HTMLElement &&
+    lbImg instanceof HTMLImageElement &&
+    lbCaption instanceof HTMLElement
+  ) {
+    const triggers = Array.from(root.querySelectorAll('.gallery-group__open')).filter(
+      (el): el is HTMLButtonElement => el instanceof HTMLButtonElement
+    );
+    const items = triggers.map((btn) => ({
+      src: btn.dataset.src ?? '',
+      alt: btn.dataset.alt ?? '',
+    }));
+    let current = 0;
+
+    const show = (i: number) => {
+      current = (i + items.length) % items.length;
+      const item = items[current];
+      lbImg.src = item.src;
+      lbImg.alt = item.alt;
+      lbCaption.textContent = item.alt;
+    };
+
+    const open = (i: number) => {
+      show(i);
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+      lbImg.removeAttribute('src');
+    };
+
+    triggers.forEach((btn) => {
+      btn.addEventListener('click', () => open(Number(btn.dataset.index)));
+    });
+    lightbox.querySelector('[data-prev]')?.addEventListener('click', () => show(current - 1));
+    lightbox.querySelector('[data-next]')?.addEventListener('click', () => show(current + 1));
+    lightbox.querySelectorAll('[data-close]').forEach((el) => {
+      el.addEventListener('click', close);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (lightbox.hidden) return;
+      if (event.key === 'Escape') close();
+      if (event.key === 'ArrowLeft') show(current - 1);
+      if (event.key === 'ArrowRight') show(current + 1);
+    });
+  }
+</script>
+
 <style>
   .gallery-groups {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-md);
   }
 
   .gallery-group__title {
-    margin: 0 0 0.5rem;
-    font-size: var(--text-sm);
+    margin: 0 0 0.6rem;
+    font-size: var(--text-base);
     font-weight: 600;
     color: var(--color-primary);
     line-height: 1.3;
@@ -70,32 +149,133 @@ const groups = [
   .gallery-group__photos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.4rem;
+    gap: var(--space-sm);
   }
 
-  .gallery-group__figure {
+  .gallery-group__open {
     margin: 0;
-    border-radius: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     background: var(--color-surface);
+    cursor: zoom-in;
+    position: relative;
+    z-index: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, z-index 0s;
   }
 
-  .gallery-group__figure img {
+  .gallery-group__open img {
     display: block;
     width: 100%;
-    height: 132px;
+    height: 240px;
     object-fit: cover;
   }
 
-  @media (max-width: 720px) {
-    .gallery-groups {
+  .gallery-group__open:hover,
+  .gallery-group__open:focus-visible {
+    z-index: 3;
+    transform: scale(1.06);
+    box-shadow: 0 12px 32px rgba(44, 36, 25, 0.22);
+  }
+
+  .gallery-lb {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: grid;
+    place-items: center;
+    padding: 1.25rem;
+  }
+
+  .gallery-lb[hidden] {
+    display: none;
+  }
+
+  .gallery-lb__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 16, 12, 0.82);
+  }
+
+  .gallery-lb__dialog {
+    position: relative;
+    z-index: 1;
+    max-width: min(96vw, 1080px);
+    max-height: 92vh;
+    display: grid;
+    justify-items: center;
+  }
+
+  .gallery-lb__img {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #111;
+  }
+
+  .gallery-lb__caption {
+    margin: 0.75rem 0 0;
+    color: #f4eee6;
+    font-size: var(--text-sm);
+    text-align: center;
+  }
+
+  .gallery-lb__close,
+  .gallery-lb__nav {
+    position: absolute;
+    border: 0;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--color-text);
+    cursor: pointer;
+    font-size: 1.75rem;
+    line-height: 1;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+  }
+
+  .gallery-lb__close {
+    top: -0.4rem;
+    right: -0.4rem;
+  }
+
+  .gallery-lb__nav--prev {
+    left: -0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .gallery-lb__nav--next {
+    right: -0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 640px) {
+    .gallery-group__photos {
       grid-template-columns: 1fr;
-      gap: var(--space-sm);
     }
 
-    .gallery-group__figure img {
-      height: 148px;
+    .gallery-group__open img {
+      height: 220px;
+    }
+
+    .gallery-lb__nav--prev {
+      left: 0.2rem;
+    }
+
+    .gallery-lb__nav--next {
+      right: 0.2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-group__open {
+      transition: none;
     }
   }
 </style>

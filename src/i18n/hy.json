@@ -82,6 +82,10 @@
   "gallery.group.entrance": "Մուտք",
   "gallery.group.living": "Խոհանոց + սրահ",
   "gallery.group.bedrooms": "Ննջարաններ",
+  "gallery.open": "Բացել լուսանկարը",
+  "gallery.close": "Փակել",
+  "gallery.prev": "Նախորդ լուսանկար",
+  "gallery.next": "Հաջորդ լուսանկար",
 
   "floorplan.title": "78 քմ հատակագիծ",
   "floorplan.note": "Բնակարանի պաշտոնական հատակագիծ։",

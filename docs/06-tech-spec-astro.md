@@ -185,7 +185,7 @@ const t = getTranslations(locale);
 </script>
 ```
 
-**Предпочтение:** CSS `scroll-snap-type: x mandatory` — zero JS.
+**Предпочтение:** CSS `scroll-snap` не обязателен. Лайтбокс в `Gallery.astro` — минимальный vanilla JS (открыть / закрыть / стрелки).
 
 ---
 

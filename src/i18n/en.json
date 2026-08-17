@@ -82,6 +82,10 @@
   "gallery.group.entrance": "Entrance",
   "gallery.group.living": "Kitchen + living room",
   "gallery.group.bedrooms": "Bedrooms",
+  "gallery.open": "Open photo",
+  "gallery.close": "Close",
+  "gallery.prev": "Previous photo",
+  "gallery.next": "Next photo",
 
   "floorplan.title": "78 m² Floor Plan",
   "floorplan.note": "Official apartment floor plan.",

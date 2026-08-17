@@ -82,6 +82,10 @@
   "gallery.group.entrance": "Вход",
   "gallery.group.living": "Кухня + зал",
   "gallery.group.bedrooms": "Спальни",
+  "gallery.open": "Открыть фото",
+  "gallery.close": "Закрыть",
+  "gallery.prev": "Предыдущее фото",
+  "gallery.next": "Следующее фото",
 
   "floorplan.title": "Планировка 78 м²",
   "floorplan.note": "Официальная схема планировки квартиры.",
