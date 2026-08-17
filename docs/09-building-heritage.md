@@ -126,11 +126,11 @@ faq.5.a (RU) = Пятиэтажный дом ведомственной заст
 3. Mechanism
 4. Consequences
 5. Solution + specs
-6. ★ Building heritage (NEW — 3 cards)     ← сюда
-7. Gallery
-8. Distances
-9. Location (Атис, церковь, туризм)
-10. Floor plan
+6. ★ Building heritage (NEW — 3 cards)
+7. Floor plan (после дома, перед фото)
+8. Gallery
+9. Distances
+10. Location (Атис, церковь, туризм)
 11. Offer
 12. FAQ (+ вопрос про дом)
 13. Footer
