@@ -52,7 +52,7 @@
 | Google Search Console | ✅ Готово | Подтверждён, sitemap отправлен |
 | Яндекс.Вебмастер | ✅ Готово | Подтверждён, sitemap отправлен |
 | Доски объявлений | ❌ Нет | list.am, myhome.am и др. |
-| Аналитика | ❌ Нет | Plausible/Umumi — phase 2 |
+| Аналитика | ✅ Готово | GA4 `G-67EW5H6MKC` |
 
 ---
 
@@ -348,7 +348,7 @@ Sitemap: https://apartment-abovyan.vercel.app/sitemap-index.xml
 
 - [ ] **A4** WebP, hero как img, image sitemap
 - [ ] **A6** Core Web Vitals, шрифты
-- [ ] **C4** Аналитика Plausible/Umami
+- [x] **C4** Аналитика GA4 (`G-67EW5H6MKC`)
 - [ ] **07** HY — финальная вычитка носителем
 - [ ] Опционально: редирект `/` по Accept-Language
 
