@@ -29,6 +29,7 @@
 
 ## Прогон 1 — завершён
 **Статус:** done  
+**Коммит:** `c790e2c`  
 **Не сделано в этом прогоне:** нет.  
 **Тесты:** `npm run build` — OK; в `dist/ru/index.html` есть `abovyan_garni_window`.
 
