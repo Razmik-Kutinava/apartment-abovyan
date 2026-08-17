@@ -115,7 +115,7 @@ background: linear-gradient(
 
 ### 8. Offer Block
 - Цена крупно: `$92 000` (Playfair Display, gold)
-- 4 bullet benefits
+- 5 bullet benefits
 - CTA WhatsApp full-width на mobile
 
 ### 9. FAQ Accordion

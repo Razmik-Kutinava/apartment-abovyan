@@ -91,9 +91,10 @@
   "floorplan.room.bath": "Salle de bain",
   "floorplan.room.wc": "WC",
 
-  "offer.title": "Votre offre",
+  "offer.title": "Prix ou montant équivalent au jour de la transaction",
   "offer.price": "92 000 $",
   "offer.price_note": "Négociable pour une décision rapide",
+  "offer.v0": "Les documents sont prêts",
   "offer.v1": "Vente directe sans agents → économie de 3–5 %",
   "offer.v2": "Photos honnêtes, sans photoshop",
   "offer.v3": "Dossier rapide, prêt à négocier",

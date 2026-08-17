@@ -91,9 +91,10 @@
   "floorplan.room.bath": "Bathroom",
   "floorplan.room.wc": "WC",
 
-  "offer.title": "Your Offer",
+  "offer.title": "Price or equivalent amount on the day of the deal",
   "offer.price": "$92,000",
   "offer.price_note": "Negotiable for a quick decision",
+  "offer.v0": "Documents are ready",
   "offer.v1": "Direct sale, no agents → save 3–5%",
   "offer.v2": "Honest live photos, no photoshop",
   "offer.v3": "Fast paperwork, ready to negotiate",

@@ -150,9 +150,10 @@
 
 | key | ru | hy | en |
 |-----|----|----|-----|
-| `offer.title` | Ваше предложение | Ваше предложение | Your Offer |
+| `offer.title` | Стоимость или эквивалентная сумма на день сделки | Արժեքը կամ համարժեք գումարը գործարքի օրվա դրությամբ | Price or equivalent amount on the day of the deal |
 | `offer.price` | $92 000 | $92 000 | $92,000 |
 | `offer.price_note` | Возможен торг при быстром решении | Возможен торг при быстром решении | Negotiable for a quick decision |
+| `offer.v0` | Документы готовы | Փաստաթղթերը պատրաստ են | Documents are ready |
 | `offer.v1` | Прямая продажа без агентов → экономия 3–5% | Прямая продажа без агентов → экономия 3–5% | Direct sale, no agents → save 3–5% |
 | `offer.v2` | Честные живые фото, без фотошопа | Честные живые фото, без фотошопа | Honest live photos, no photoshop |
 | `offer.v3` | Быстрое оформление, готов к переговорам | Быстрое оформление, готов к переговорам | Fast paperwork, ready to negotiate |

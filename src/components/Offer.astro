@@ -3,7 +3,7 @@ import type { Translations } from '../utils/i18n';
 import { buildWhatsAppUrl } from '../utils/whatsapp';
 interface Props { t: Translations; }
 const { t } = Astro.props;
-const benefits = ['v1', 'v2', 'v3', 'v4'] as const;
+const benefits = ['v0', 'v1', 'v2', 'v3', 'v4'] as const;
 const waUrl = buildWhatsAppUrl(t['offer.cta_prefill']);
 ---
 
