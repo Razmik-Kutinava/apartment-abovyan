@@ -32,5 +32,6 @@
 
 ## Прогон 1 — завершён
 **Статус:** done  
+**Коммит:** `cec793a`  
 **Не сделано в этом прогоне:** нет.  
 **Тесты:** `npm run build` — OK; в `dist/ru/index.html` `id="floorplan"` (offset 14280) раньше `id="gallery"` (14891).
