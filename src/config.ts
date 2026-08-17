@@ -5,6 +5,7 @@ export const SITE = {
   priceFormatted: { ru: '$92 000', en: '$92,000', hy: '$92 000', fr: '92 000 $' },
   url: 'https://apartment-abovyan.vercel.app',
   gaId: 'G-67EW5H6MKC',
+  metrikaId: 111685108,
 } as const;
 
 /** External proof links for Mount Hatis / Atis Christ monument (Mechanism section). */
