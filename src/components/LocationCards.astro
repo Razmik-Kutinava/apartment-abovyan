@@ -10,8 +10,9 @@ const { t } = Astro.props;
 const cards = [
   {
     key: 'atis',
-    image: '/images/location/atis.jpg',
+    image: '/images/location/abovyan_garni_window.jpg',
     alt: t['img.atist.alt'],
+    cover: true,
   },
   {
     key: 'adventure',
@@ -38,15 +39,15 @@ const cards = [
       <p class="section__lead">{t['location.subtitle']}</p>
     </div>
     <ul class="location-grid" role="list">
-      {cards.map(({ key, image, alt }) => (
+      {cards.map((card) => (
         <li class="location-grid__cell">
           <article class="location-card">
-            <div class="location-card__media">
-              <img src={image} alt={alt} loading="lazy" decoding="async" width="600" height="600" />
+            <div class:list={['location-card__media', 'cover' in card && card.cover && 'location-card__media--cover']}>
+              <img src={card.image} alt={card.alt} loading="lazy" decoding="async" width="600" height="600" />
             </div>
             <div class="location-card__body">
-              <h3>{t[`nearby.${key}.title`]}</h3>
-              <p>{t[`nearby.${key}.text`]}</p>
+              <h3>{t[`nearby.${card.key}.title`]}</h3>
+              <p>{t[`nearby.${card.key}.text`]}</p>
             </div>
           </article>
         </li>
@@ -95,6 +96,10 @@ const cards = [
     height: 100%;
     object-fit: contain;
     object-position: center;
+  }
+
+  .location-card__media--cover img {
+    object-fit: cover;
   }
 
   .location-card__body {

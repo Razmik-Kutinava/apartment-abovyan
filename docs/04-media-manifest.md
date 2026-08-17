@@ -18,6 +18,7 @@
 | Текущий файл | Целевое имя | Секция | Приоритет | Alt (RU) |
 |--------------|-------------|--------|-----------|----------|
 | `hatis3-rus.jpg` | `hero-atist-monument.jpg` | **Hero background** | ★★★ | Монумент Иисуса Христа на горе Атис — будущая достопримечательность Армении |
+| `abovyan_garni_window.png` | `location/abovyan_garni_window.jpg` | Location card: Атис (фото из окна) | ★★★ | Вид из окна квартиры на гору Атис и Абовян |
 | `adis.png` | `mount-atist.png` | Location section bg | ★★★ | Гора Атис, Абовян |
 | `церковь.png` | `church-st-john-01.png` | Nearby card: Church | ★★ | Церковь Святого Иоанна Крестителя, Абовян |
 | `церковь-2.png` | `church-st-john-02.png` | Nearby card: Church (alt) | ★★ | Церковь Святого Иоанна Крестителя — вид снаружи |
