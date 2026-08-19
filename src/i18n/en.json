@@ -100,7 +100,7 @@
 
   "offer.title": "Price or equivalent amount on the day of the deal",
   "offer.price": "$92,000",
-  "offer.price_note": "Negotiable for a quick decision",
+  "offer.price_note": "",
   "offer.v0": "Documents are ready",
   "offer.v1": "Direct sale, no agents → save 3–5%",
   "offer.v2": "Honest live photos, no photoshop",
@@ -121,7 +121,7 @@
   "faq.5.q": "When was the building built, and what does “factory housing” mean?",
   "faq.5.a": "1970s. Tuff walls: warm in winter, slow to heat in summer, no air conditioning needed — always comfortable.",
 
-  "footer.phone": "+374 77 271 488",
+  "footer.phone": "+374 77 *** ***",
   "footer.cta": "Message on WhatsApp",
   "footer.address": "10 Garni St., Abovyan, Armenia",
   "footer.copyright": "© 2026 · Direct Owner Sale",

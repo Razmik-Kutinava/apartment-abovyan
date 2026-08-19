@@ -100,7 +100,7 @@
 
   "offer.title": "Prix ou montant équivalent au jour de la transaction",
   "offer.price": "92 000 $",
-  "offer.price_note": "Négociable pour une décision rapide",
+  "offer.price_note": "",
   "offer.v0": "Les documents sont prêts",
   "offer.v1": "Vente directe sans agents → économie de 3–5 %",
   "offer.v2": "Photos honnêtes, sans photoshop",
@@ -121,7 +121,7 @@
   "faq.5.q": "De quelle année est l’immeuble, et que signifie « logement d’usine » ?",
   "faq.5.a": "Années 70. Murs en tuf : chaud l’hiver, chauffe lentement l’été, pas besoin de climatisation — toujours confortable.",
 
-  "footer.phone": "+374 77 271 488",
+  "footer.phone": "+374 77 *** ***",
   "footer.cta": "Écrire sur WhatsApp",
   "footer.address": "10 rue Garni, Abovyan, Arménie",
   "footer.copyright": "© 2026 · Vente directe du propriétaire",
