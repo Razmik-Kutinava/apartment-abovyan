@@ -1,6 +1,6 @@
 {
   "meta.title": "Appartement 78 m² à Abovyan — vue sur le mont Atis | 92 000 $",
-  "meta.description": "3 chambres + séjour, 4e étage. Vente directe du propriétaire. Monument du Christ sur le mont Atis à proximité. WhatsApp : +37477271488",
+  "meta.description": "3 chambres + séjour, 4e étage. Vente directe du propriétaire. Monument du Christ sur le mont Atis à proximité.",
 
   "schema.website.name": "Garni 10 — appartement à Abovyan",
   "schema.listing.name": "Appartement 78 m², 10 rue Garni, Abovyan",
@@ -9,7 +9,7 @@
   "nav.lang.hy": "Հայ",
   "nav.lang.en": "ENG",
   "nav.lang.fr": "FR",
-  "nav.cta": "Écrire",
+  "nav.cta": "Poser une question",
 
   "hero.badge": "Vente directe · Sans agents",
   "hero.title": "Appartement avec potentiel de hausse de prix",
@@ -17,7 +17,7 @@
   "hero.benefit": "Près de la nouvelle attraction d’Arménie. Le monument de Jésus-Christ sur le mont Atis, qui fera de la région un centre touristique.",
   "hero.urgency": "Seule vente dans cet immeuble. Vente directe du propriétaire — sans commission d’intermédiaire.",
   "hero.spoiler": "↓ Photos réelles, plan et pourquoi le quartier va bientôt prendre de la valeur",
-  "hero.cta": "📲 Écrire sur WhatsApp",
+  "hero.cta": "Poser une question",
   "hero.cta_prefill": "Bonjour ! Je suis intéressé(e) par l’appartement au 10 rue Garni à Abovyan",
 
   "pains.title": "Cela vous parle ?",
@@ -100,13 +100,12 @@
 
   "offer.title": "Prix ou montant équivalent au jour de la transaction",
   "offer.price": "92 000 $",
-  "offer.price_note": "",
   "offer.v0": "Les documents sont prêts",
   "offer.v1": "Vente directe sans agents → économie de 3–5 %",
   "offer.v2": "Photos honnêtes, sans photoshop",
   "offer.v3": "Dossier rapide, prêt à négocier",
   "offer.v4": "Seul appartement en vente dans cet immeuble",
-  "offer.cta": "📲 Demander le prix et poser une question",
+  "offer.cta": "Poser une question",
   "offer.cta_prefill": "Bonjour ! Je souhaite des détails sur l’appartement au 10 rue Garni (92 000 $)",
 
   "faq.title": "Questions fréquentes",
@@ -121,8 +120,7 @@
   "faq.5.q": "De quelle année est l’immeuble, et que signifie « logement d’usine » ?",
   "faq.5.a": "Années 70. Murs en tuf : chaud l’hiver, chauffe lentement l’été, pas besoin de climatisation — toujours confortable.",
 
-  "footer.phone": "+374 77 *** ***",
-  "footer.cta": "Écrire sur WhatsApp",
+  "footer.cta": "Poser une question",
   "footer.address": "10 rue Garni, Abovyan, Arménie",
   "footer.copyright": "© 2026 · Vente directe du propriétaire",
 

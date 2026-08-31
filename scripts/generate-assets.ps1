@@ -7,6 +7,7 @@ if (Test-Path "assets\IMG_8807.HEIC") {
   ffmpeg -y -i "public\images\gallery\09-view.jpg" -q:v 3 "public\images\gallery\09-view.webp"
 }
 
-ffmpeg -y -i "public\images\hero-atist-monument.jpg" -vf "scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630,drawbox=x=0:y=0:w=1200:h=630:color=black@0.45:t=fill,drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='78 m² · Abovyan · `$92,000':fontsize=52:fontcolor=white:x=(w-text_w)/2:y=h*0.38,drawtext=fontfile='C\:/Windows/Fonts/arial.ttf':text='Direct Sale · Garni St. 10':fontsize=34:fontcolor=0xC9A962:x=(w-text_w)/2:y=h*0.52,drawtext=fontfile='C\:/Windows/Fonts/arial.ttf':text='WhatsApp +37477271488':fontsize=28:fontcolor=0x25D366:x=(w-text_w)/2:y=h*0.64" -frames:v 1 "public\images\og-preview.jpg"
+# OG без телефона — номер не светим в превью WhatsApp/соцсетей
+ffmpeg -y -i "public\images\hero-atist-monument.jpg" -vf "scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630,drawbox=x=0:y=0:w=1200:h=630:color=black@0.45:t=fill,drawtext=fontfile='C\:/Windows/Fonts/arialbd.ttf':text='78 m² · Abovyan · `$92,000':fontsize=52:fontcolor=white:x=(w-text_w)/2:y=h*0.40,drawtext=fontfile='C\:/Windows/Fonts/arial.ttf':text='Direct Sale · Garni St. 10':fontsize=34:fontcolor=0xC9A962:x=(w-text_w)/2:y=h*0.56" -frames:v 1 "public\images\og-preview-v2.jpg"
 
-Write-Host "Done: 09-view.jpg, og-preview.jpg"
+Write-Host "Done: 09-view.jpg, og-preview-v2.jpg"

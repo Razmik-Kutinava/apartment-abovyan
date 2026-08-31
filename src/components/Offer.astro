@@ -12,7 +12,6 @@ const waUrl = buildWhatsAppUrl(t['offer.cta_prefill']);
     <div class="offer__content">
       <h2>{t['offer.title']}</h2>
       <p class="offer__price">{t['offer.price']}</p>
-      <p class="offer__note">{t['offer.price_note']}</p>
       <ul class="offer__list">
         {benefits.map((key) => (
           <li>{t[`offer.${key}`]}</li>
@@ -34,11 +33,7 @@ const waUrl = buildWhatsAppUrl(t['offer.cta_prefill']);
     font-size: clamp(2.5rem, 2rem + 3vw, 4rem);
     color: var(--color-gold);
     font-weight: 700;
-    margin: var(--space-md) 0 var(--space-xs);
-  }
-  .offer__note {
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-lg);
+    margin: var(--space-md) 0 var(--space-lg);
   }
   .offer__list {
     list-style: none;

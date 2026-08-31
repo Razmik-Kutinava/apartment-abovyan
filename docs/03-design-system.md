@@ -124,7 +124,7 @@ background: linear-gradient(
 - 5 вопросов
 
 ### 10. Footer
-- Минимум: телефон + WhatsApp + адрес
+- Минимум: WhatsApp + адрес (телефон на сайте не публикуем)
 - Тёмный фон `--color-bg-dark`
 
 ### 11. Language Switcher

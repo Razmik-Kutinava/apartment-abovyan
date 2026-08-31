@@ -4,6 +4,7 @@
 
 | ID | Задача | Статус | Файл |
 |----|--------|--------|------|
+| TASK-014 | Телефон/OG без номера, торг убрать, CTA «Задать вопрос» | done → push/CI/deploy | [TASK-014](./tasks/TASK-014-cta-phone-torg.md) |
 | — | Ожидание индексации Google/Яндекс (7–14 дней) | waiting | [11-marketing-seo](../docs/11-marketing-seo.md) |
 
 ## Не сделано (хвосты)

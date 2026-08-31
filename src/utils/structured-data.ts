@@ -27,7 +27,7 @@ export function buildStructuredData(params: {
 }) {
   const { locale, siteUrl, pageUrl, t } = params;
   const addr = addressByLocale[locale];
-  const ogImage = `${siteUrl}/images/og-preview.jpg`;
+  const ogImage = `${siteUrl}/images/og-preview-v2.jpg`;
   const galleryImages = GALLERY_IMAGES.map((name) => `${siteUrl}/images/gallery/${name}`);
 
   return {
@@ -67,7 +67,6 @@ export function buildStructuredData(params: {
           unitCode: 'MTK',
         },
         numberOfRooms: 4,
-        telephone: SITE.phone,
       },
       {
         '@type': 'FAQPage',

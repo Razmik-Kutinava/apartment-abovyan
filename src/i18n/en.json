@@ -1,6 +1,6 @@
 {
   "meta.title": "78 m² Apartment in Abovyan — Mount Atis View | $92,000",
-  "meta.description": "3 bedrooms + living room, 4th floor. Direct owner sale. Christ monument on Mount Atis nearby. WhatsApp: +37477271488",
+  "meta.description": "3 bedrooms + living room, 4th floor. Direct owner sale. Christ monument on Mount Atis nearby.",
 
   "schema.website.name": "Garni 10 — Abovyan Apartment",
   "schema.listing.name": "78 m² Apartment, 10 Garni St., Abovyan",
@@ -9,7 +9,7 @@
   "nav.lang.hy": "ARM",
   "nav.lang.en": "ENG",
   "nav.lang.fr": "FR",
-  "nav.cta": "Message",
+  "nav.cta": "Ask a question",
 
   "hero.badge": "Direct Sale · No Agents",
   "hero.title": "Apartment with price growth potential",
@@ -17,7 +17,7 @@
   "hero.benefit": "Next to Armenia’s new landmark. The Jesus Christ monument on Mount Atis, set to turn the region into a tourism hub.",
   "hero.urgency": "The only sale in this building. Direct from the owner — no intermediary fees.",
   "hero.spoiler": "↓ Real photos, floor plan, and why this area is about to surge in value",
-  "hero.cta": "📲 Message on WhatsApp",
+  "hero.cta": "Ask a question",
   "hero.cta_prefill": "Hello! I'm interested in the apartment at Garni St. 10, Abovyan",
 
   "pains.title": "Sound familiar?",
@@ -100,13 +100,12 @@
 
   "offer.title": "Price or equivalent amount on the day of the deal",
   "offer.price": "$92,000",
-  "offer.price_note": "",
   "offer.v0": "Documents are ready",
   "offer.v1": "Direct sale, no agents → save 3–5%",
   "offer.v2": "Honest live photos, no photoshop",
   "offer.v3": "Fast paperwork, ready to negotiate",
   "offer.v4": "The only apartment for sale in this building",
-  "offer.cta": "📲 Ask About Price & Details",
+  "offer.cta": "Ask a question",
   "offer.cta_prefill": "Hello! I'd like details about the apartment at Garni St. 10 ($92,000)",
 
   "faq.title": "FAQ",
@@ -121,8 +120,7 @@
   "faq.5.q": "When was the building built, and what does “factory housing” mean?",
   "faq.5.a": "1970s. Tuff walls: warm in winter, slow to heat in summer, no air conditioning needed — always comfortable.",
 
-  "footer.phone": "+374 77 *** ***",
-  "footer.cta": "Message on WhatsApp",
+  "footer.cta": "Ask a question",
   "footer.address": "10 Garni St., Abovyan, Armenia",
   "footer.copyright": "© 2026 · Direct Owner Sale",
 
