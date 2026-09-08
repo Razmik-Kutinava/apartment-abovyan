@@ -19,8 +19,8 @@
 - [x] Этап 1: Переименовать/положить файл как `public/google2d8f62afd271a37e.html`
 - [x] Этап 2: Убрать неверно названный `apartment_abovyan.html` из корня
 - [x] Этап 3: `npm run build` — файл в `dist/`
-- [ ] Этап 4: Commit + push → Vercel
-- [ ] Этап 5: Проверить production URL файла
+- [x] Этап 4: Commit + push → Vercel (`2aa6347`)
+- [x] Этап 5: Проверить production URL файла
 - [ ] Этап 6: Заказчик нажимает «Подтвердить» в GSC
 
 ## Было → Стало
@@ -28,7 +28,9 @@
 | Область | Было | Стало |
 |---------|------|-------|
 | Файл верификации | `apartment_abovyan.html` в корне (неверное имя) | `public/google2d8f62afd271a37e.html` |
-| Production | нет нового токена | URL после деплоя: `/google2d8f62afd271a37e.html` |
+| Production | нет нового токена | `https://apartment-abovyan.vercel.app/google2d8f62afd271a37e.html` → 200 |
+
+**Commit:** `2aa6347`
 
 ## Не сделано в этом прогоне
 - Ручное нажатие «Подтвердить» в Google Search Console (только заказчик)
