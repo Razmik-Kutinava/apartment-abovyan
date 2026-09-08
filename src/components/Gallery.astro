@@ -8,22 +8,46 @@ const groups = [
   {
     title: t['gallery.group.entrance'],
     images: [
-      { src: '/images/gallery/07-hallway.jpg', alt: t['img.gallery.07.alt'] },
-      { src: '/images/gallery/10-hallway-2.jpg', alt: t['img.gallery.10.alt'] },
+      {
+        src: '/images/gallery/07-hallway.jpg',
+        webp: '/images/gallery/07-hallway.webp',
+        alt: t['img.gallery.07.alt'],
+      },
+      {
+        src: '/images/gallery/10-hallway-2.jpg',
+        webp: '/images/gallery/10-hallway-2.webp',
+        alt: t['img.gallery.10.alt'],
+      },
     ],
   },
   {
     title: t['gallery.group.living'],
     images: [
-      { src: '/images/gallery/02-living.jpg', alt: t['img.gallery.02.alt'] },
-      { src: '/images/gallery/08-kitchen.jpg', alt: t['img.gallery.08.alt'] },
+      {
+        src: '/images/gallery/02-living.jpg',
+        webp: '/images/gallery/02-living.webp',
+        alt: t['img.gallery.02.alt'],
+      },
+      {
+        src: '/images/gallery/08-kitchen.jpg',
+        webp: '/images/gallery/08-kitchen.webp',
+        alt: t['img.gallery.08.alt'],
+      },
     ],
   },
   {
     title: t['gallery.group.bedrooms'],
     images: [
-      { src: '/images/gallery/05-bedroom-light.jpg', alt: t['img.gallery.05.alt'] },
-      { src: '/images/gallery/04-bedroom.jpg', alt: t['img.gallery.04.alt'] },
+      {
+        src: '/images/gallery/05-bedroom-light.jpg',
+        webp: '/images/gallery/05-bedroom-light.webp',
+        alt: t['img.gallery.05.alt'],
+      },
+      {
+        src: '/images/gallery/04-bedroom.jpg',
+        webp: '/images/gallery/04-bedroom.webp',
+        alt: t['img.gallery.04.alt'],
+      },
     ],
   },
 ] as const;
@@ -49,11 +73,14 @@ let index = 0;
                   type="button"
                   class="gallery-group__open"
                   data-index={i}
-                  data-src={img.src}
+                  data-src={img.webp}
                   data-alt={img.alt}
                   aria-label={`${t['gallery.open']}: ${img.alt}`}
                 >
-                  <img src={img.src} alt={img.alt} loading="lazy" width="800" height="560" />
+                  <picture>
+                    <source type="image/webp" srcset={img.webp} />
+                    <img src={img.src} alt={img.alt} loading="lazy" decoding="async" width="800" height="560" />
+                  </picture>
                 </button>
               );
             })}
@@ -166,10 +193,14 @@ let index = 0;
     transition: transform 0.2s ease, box-shadow 0.2s ease, z-index 0s;
   }
 
+  .gallery-group__open picture,
   .gallery-group__open img {
     display: block;
     width: 100%;
     height: 240px;
+  }
+
+  .gallery-group__open img {
     object-fit: cover;
   }
 

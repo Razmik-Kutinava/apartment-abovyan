@@ -11,17 +11,20 @@ const cards = [
   {
     key: 'atis',
     image: '/images/location/abovyan_garni_window.jpg',
+    webp: '/images/location/abovyan_garni_window.webp',
     alt: t['img.atist.alt'],
     cover: true,
   },
   {
     key: 'adventure',
     image: '/images/location/adventure.jpg',
+    webp: '/images/location/adventure.webp',
     alt: t['img.adventure.alt'],
   },
   {
     key: 'church',
     image: '/images/location/church.png',
+    webp: '/images/location/church.webp',
     alt: t['img.church.alt'],
   },
   {
@@ -43,7 +46,14 @@ const cards = [
         <li class="location-grid__cell">
           <article class="location-card">
             <div class:list={['location-card__media', 'cover' in card && card.cover && 'location-card__media--cover']}>
-              <img src={card.image} alt={card.alt} loading="lazy" decoding="async" width="600" height="600" />
+              {'webp' in card && card.webp ? (
+                <picture>
+                  <source type="image/webp" srcset={card.webp} />
+                  <img src={card.image} alt={card.alt} loading="lazy" decoding="async" width="600" height="600" />
+                </picture>
+              ) : (
+                <img src={card.image} alt={card.alt} loading="lazy" decoding="async" width="600" height="600" />
+              )}
             </div>
             <div class="location-card__body">
               <h3>{t[`nearby.${card.key}.title`]}</h3>
@@ -91,9 +101,14 @@ const cards = [
     overflow: hidden;
   }
 
-  .location-card__media img {
+  .location-card__media img,
+  .location-card__media picture {
     width: 100%;
     height: 100%;
+    display: block;
+  }
+
+  .location-card__media img {
     object-fit: contain;
     object-position: center;
   }

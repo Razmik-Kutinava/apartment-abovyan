@@ -3,6 +3,27 @@ import { SITE } from '../config';
 import type { Locale } from '../utils/i18n';
 import { getTranslations } from '../utils/i18n';
 import { buildStructuredData } from '../utils/structured-data';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-ext-400.css';
+import '@fontsource/inter/latin-ext-500.css';
+import '@fontsource/inter/latin-ext-600.css';
+import '@fontsource/inter/cyrillic-400.css';
+import '@fontsource/inter/cyrillic-500.css';
+import '@fontsource/inter/cyrillic-600.css';
+import '@fontsource/montserrat/latin-500.css';
+import '@fontsource/montserrat/latin-600.css';
+import '@fontsource/montserrat/latin-700.css';
+import '@fontsource/montserrat/latin-ext-500.css';
+import '@fontsource/montserrat/latin-ext-600.css';
+import '@fontsource/montserrat/latin-ext-700.css';
+import '@fontsource/montserrat/cyrillic-500.css';
+import '@fontsource/montserrat/cyrillic-600.css';
+import '@fontsource/montserrat/cyrillic-700.css';
+import '@fontsource/playfair-display/latin-700.css';
+import '@fontsource/playfair-display/latin-ext-700.css';
+import '@fontsource/playfair-display/cyrillic-700.css';
 import '../styles/global.css';
 
 interface Props {
@@ -69,51 +90,77 @@ const siteName = t['schema.website.name'];
     <meta name="twitter:image" content={`${siteUrl}/images/og-preview-v2.jpg`} />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/images/hero-atist-monument.jpg" />
-    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}></script>
-    <script is:inline define:vars={{ gaId: SITE.gaId }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', gaId);
-    </script>
-    <script is:inline define:vars={{ metrikaId: SITE.metrikaId }}>
-      (function (m, e, t, r, i, k, a) {
-        m[i] =
-          m[i] ||
-          function () {
-            (m[i].a = m[i].a || []).push(arguments);
-          };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-          if (document.scripts[j].src === r) {
-            return;
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-atist-monument.webp"
+      type="image/webp"
+      imagesrcset="/images/hero-atist-monument-640.webp 640w, /images/hero-atist-monument.webp 960w"
+      imagesizes="(max-width: 900px) 100vw, 50vw"
+      fetchpriority="high"
+    />
+  </head>
+  <body>
+    <slot />
+    <script is:inline define:vars={{ gaId: SITE.gaId, metrikaId: SITE.metrikaId }}>
+      (function () {
+        var loaded = false;
+        function loadAnalytics() {
+          if (loaded) return;
+          loaded = true;
+
+          var gtagScript = document.createElement('script');
+          gtagScript.async = true;
+          gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
+          document.head.appendChild(gtagScript);
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', gaId, { send_page_view: true });
+
+          (function (m, e, t, r, i, k, a) {
+            m[i] =
+              m[i] ||
+              function () {
+                (m[i].a = m[i].a || []).push(arguments);
+              };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) return;
+            }
+            k = e.createElement(t);
+            a = e.getElementsByTagName(t)[0];
+            k.async = 1;
+            k.src = r;
+            a.parentNode.insertBefore(k, a);
+          })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + metrikaId, 'ym');
+
+          ym(metrikaId, 'init', {
+            ssr: true,
+            webvisor: false,
+            clickmap: true,
+            accurateTrackBounce: true,
+            trackLinks: true,
+          });
+        }
+
+        function schedule() {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadAnalytics, { timeout: 4000 });
+          } else {
+            setTimeout(loadAnalytics, 2000);
           }
         }
-        k = e.createElement(t);
-        a = e.getElementsByTagName(t)[0];
-        k.async = 1;
-        k.src = r;
-        a.parentNode.insertBefore(k, a);
-      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + metrikaId, 'ym');
-      ym(metrikaId, 'init', {
-        ssr: true,
-        webvisor: true,
-        clickmap: true,
-        accurateTrackBounce: true,
-        trackLinks: true,
-      });
+
+        if (document.readyState === 'complete') schedule();
+        else window.addEventListener('load', schedule, { once: true });
+      })();
     </script>
     <noscript>
       <img src={`https://mc.yandex.ru/watch/${SITE.metrikaId}`} style="position:absolute; left:-9999px;" alt="" />
     </noscript>
-  </head>
-  <body>
-    <slot />
   </body>
 </html>

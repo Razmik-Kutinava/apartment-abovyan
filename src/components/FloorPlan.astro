@@ -11,15 +11,22 @@ const { t } = Astro.props;
       <p class="section__lead">{t['floorplan.note']}</p>
     </div>
     <figure class="floorplan">
-      <img
-        src="/images/floorplan-78.jpg"
-        alt={t['img.floorplan.alt']}
-        loading="lazy"
-        decoding="async"
-        width="1200"
-        height="900"
-        class="floorplan__image"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/images/floorplan-78-720.webp 720w, /images/floorplan-78.webp 1200w"
+          sizes="(max-width: 720px) 100vw, 720px"
+        />
+        <img
+          src="/images/floorplan-78.jpg"
+          alt={t['img.floorplan.alt']}
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="900"
+          class="floorplan__image"
+        />
+      </picture>
     </figure>
   </div>
 </section>
@@ -29,10 +36,13 @@ const { t } = Astro.props;
     margin: 0;
     max-width: 720px;
   }
-  .floorplan__image {
+  .floorplan__image,
+  .floorplan picture {
     width: 100%;
     height: auto;
     display: block;
+  }
+  .floorplan__image {
     background: var(--color-surface);
     border-radius: var(--radius);
     box-shadow: var(--shadow);

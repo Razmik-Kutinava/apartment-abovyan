@@ -4,22 +4,25 @@
 
 | ID | Задача | Статус | Файл |
 |----|--------|--------|------|
-| TASK-015 | GSC повторная верификация (HTML-файл) | in_progress | [TASK-015](./tasks/TASK-015-gsc-reverify.md) |
+| TASK-015 | GSC повторная верификация (HTML-файл) | waiting_user | [TASK-015](./tasks/TASK-015-gsc-reverify.md) |
 | — | Ожидание индексации Google/Яндекс (7–14 дней) | waiting | [11-marketing-seo](../docs/11-marketing-seo.md) |
 
 ## Не сделано (хвосты)
 
 | ID | Что | Приоритет |
 |----|-----|-----------|
+| TASK-016 | PSI: перепроверить mobile/desktop после деплоя | medium |
 | — | HY — финальная вычитка носителем | low |
 | — | Node 24.x в package.json (Vercel warning с 2026-10) | low |
 | — | Доски / шаринг | отложено |
 | — | После рекламы: сброс кэша превью WhatsApp (если старый шаринг) | low |
+| — | CSP / COOP / Trusted Types (Lighthouse best practices) | low |
 
 ## Готово
 
 | ID | Задача | Дата |
 |----|--------|------|
+| TASK-016 | PageSpeed: video/fonts/analytics/WebP + deploy | 2026-09-08 |
 | TASK-014 | Телефон/OG без номера, торг убрать, CTA «Задать вопрос» | 2026-08-31 |
 | — | Подготовка docs/ (бриф, контент, дизайн) | 2026-06-27 |
 | TASK-001 | Astro-лендинг MVP локально | 2026-06-27 |
