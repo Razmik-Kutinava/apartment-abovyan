@@ -4,6 +4,7 @@
 
 | ID | Задача | Статус | Файл |
 |----|--------|--------|------|
+| TASK-015 | GSC повторная верификация (HTML-файл) | in_progress | [TASK-015](./tasks/TASK-015-gsc-reverify.md) |
 | — | Ожидание индексации Google/Яндекс (7–14 дней) | waiting | [11-marketing-seo](../docs/11-marketing-seo.md) |
 
 ## Не сделано (хвосты)
