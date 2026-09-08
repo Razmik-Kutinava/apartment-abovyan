@@ -9,7 +9,13 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
 <footer class="footer">
   <div class="container footer__inner">
     <p class="footer__address">{t['footer.address']}</p>
-    <a href={waUrl} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
+    <a
+      href={waUrl}
+      class="btn btn--whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${t['footer.cta']} — WhatsApp footer`}
+    >
       {t['footer.cta']}
     </a>
     <p class="footer__copy">{t['footer.copyright']}</p>

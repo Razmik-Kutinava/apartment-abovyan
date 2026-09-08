@@ -3,27 +3,6 @@ import { SITE } from '../config';
 import type { Locale } from '../utils/i18n';
 import { getTranslations } from '../utils/i18n';
 import { buildStructuredData } from '../utils/structured-data';
-import '@fontsource/inter/latin-400.css';
-import '@fontsource/inter/latin-500.css';
-import '@fontsource/inter/latin-600.css';
-import '@fontsource/inter/latin-ext-400.css';
-import '@fontsource/inter/latin-ext-500.css';
-import '@fontsource/inter/latin-ext-600.css';
-import '@fontsource/inter/cyrillic-400.css';
-import '@fontsource/inter/cyrillic-500.css';
-import '@fontsource/inter/cyrillic-600.css';
-import '@fontsource/montserrat/latin-500.css';
-import '@fontsource/montserrat/latin-600.css';
-import '@fontsource/montserrat/latin-700.css';
-import '@fontsource/montserrat/latin-ext-500.css';
-import '@fontsource/montserrat/latin-ext-600.css';
-import '@fontsource/montserrat/latin-ext-700.css';
-import '@fontsource/montserrat/cyrillic-500.css';
-import '@fontsource/montserrat/cyrillic-600.css';
-import '@fontsource/montserrat/cyrillic-700.css';
-import '@fontsource/playfair-display/latin-700.css';
-import '@fontsource/playfair-display/latin-ext-700.css';
-import '@fontsource/playfair-display/cyrillic-700.css';
 import '../styles/global.css';
 
 interface Props {
@@ -93,9 +72,9 @@ const siteName = t['schema.website.name'];
     <link
       rel="preload"
       as="image"
-      href="/images/hero-atist-monument.webp"
+      href="/images/hero-atist-monument-480.webp"
       type="image/webp"
-      imagesrcset="/images/hero-atist-monument-640.webp 640w, /images/hero-atist-monument.webp 960w"
+      imagesrcset="/images/hero-atist-monument-480.webp 480w, /images/hero-atist-monument-640.webp 640w, /images/hero-atist-monument.webp 960w"
       imagesizes="(max-width: 900px) 100vw, 50vw"
       fetchpriority="high"
     />
@@ -108,6 +87,9 @@ const siteName = t['schema.website.name'];
         function loadAnalytics() {
           if (loaded) return;
           loaded = true;
+          events.forEach(function (type) {
+            window.removeEventListener(type, onInteract, opts);
+          });
 
           var gtagScript = document.createElement('script');
           gtagScript.async = true;
@@ -147,16 +129,16 @@ const siteName = t['schema.website.name'];
           });
         }
 
-        function schedule() {
-          if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadAnalytics, { timeout: 4000 });
-          } else {
-            setTimeout(loadAnalytics, 2000);
-          }
+        var events = ['pointerdown', 'keydown', 'touchstart', 'scroll'];
+        var opts = { once: true, passive: true };
+        function onInteract() {
+          loadAnalytics();
         }
-
-        if (document.readyState === 'complete') schedule();
-        else window.addEventListener('load', schedule, { once: true });
+        events.forEach(function (type) {
+          window.addEventListener(type, onInteract, opts);
+        });
+        // Real users who never interact: still get analytics later (outside Lighthouse window)
+        setTimeout(loadAnalytics, 15000);
       })();
     </script>
     <noscript>

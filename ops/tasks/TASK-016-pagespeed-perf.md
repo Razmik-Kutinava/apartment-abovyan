@@ -36,13 +36,14 @@
 ## Было → Стало
 | Область | Было | Стало |
 |---------|------|-------|
-| Hero video | 2.2 МБ, `preload=auto` на старте | ~548 КБ, `preload=none`, load после idle |
-| LCP | конкурирует с видео | poster WebP + `fetchpriority=high` |
-| Fonts | Google Fonts CSS (blocking) | self-host `@fontsource` latin/cyrillic |
-| Analytics | GA+Metrika в head, webvisor on | после `load`+idle, webvisor off |
+| Hero video | 2.2 МБ, `preload=auto` на старте | ~548 КБ; mobile = только poster; desktop после interact/8s |
+| LCP | конкурирует с видео | poster WebP 480/640/960 + preload |
+| Fonts | Google Fonts / @fontsource (blocking) | system-ui + Georgia (0 web fonts) |
+| Analytics | GA+Metrika early / idle 4s | после interaction или 15s |
 | Images | тяжёлые JPG | WebP + picture/srcset |
-| Contrast | gold `#c9a962`, muted светлый, footer opacity | darker gold/muted, solid footer text |
+| Contrast | gold/muted/primary светлые | darker tokens; header lang 0.92 / #f0d78c |
 | Cache | images/video | + `/_astro/*` immutable |
+| PSI mobile | 59 → 80 | цель 90+ (прогон 2) |
 
 ## Не сделано в этом прогоне
 - CSP / COOP / Trusted Types (best-practices nice-to-have)

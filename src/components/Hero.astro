@@ -12,7 +12,7 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
     <picture class="hero__poster">
       <source
         type="image/webp"
-        srcset="/images/hero-atist-monument-640.webp 640w, /images/hero-atist-monument.webp 960w"
+        srcset="/images/hero-atist-monument-480.webp 480w, /images/hero-atist-monument-640.webp 640w, /images/hero-atist-monument.webp 960w"
         sizes="(max-width: 900px) 100vw, 50vw"
       />
       <img
@@ -40,7 +40,13 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
     <p class="hero__subtitle">{t['hero.subtitle']}</p>
     <p class="hero__benefit">{t['hero.benefit']}</p>
     <p class="hero__urgency">{t['hero.urgency']}</p>
-    <a href={waUrl} class="btn btn--whatsapp hero__cta" target="_blank" rel="noopener noreferrer">
+    <a
+      href={waUrl}
+      class="btn btn--whatsapp hero__cta"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${t['hero.cta']} — WhatsApp`}
+    >
       {t['hero.cta']}
     </a>
     <p class="hero__spoiler">{t['hero.spoiler']}</p>
@@ -54,6 +60,7 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
     // no-op
   } else {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isDesktop = window.matchMedia('(min-width: 901px)').matches;
     const conn = /** @type {{ saveData?: boolean } | undefined} */ (navigator.connection);
     const saveData = Boolean(conn && conn.saveData);
     const src = heroVideo.dataset.src;
@@ -75,13 +82,19 @@ const waUrl = buildWhatsAppUrl(t['hero.cta_prefill']);
       heroVideo.load();
     };
 
-    if (!reducedMotion && !saveData) {
+    // Mobile PSI / slow networks: keep static poster only
+    if (!isDesktop || reducedMotion || saveData) {
+      heroVideo.remove();
+    } else {
       const start = () => loadAndPlay();
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(start, { timeout: 2500 });
-      } else {
-        window.addEventListener('load', () => setTimeout(start, 400), { once: true });
-      }
+      const onInteract = () => {
+        window.removeEventListener('pointerdown', onInteract);
+        window.removeEventListener('scroll', onInteract);
+        start();
+      };
+      window.addEventListener('pointerdown', onInteract, { once: true, passive: true });
+      window.addEventListener('scroll', onInteract, { once: true, passive: true });
+      setTimeout(start, 8000);
     }
   }
 </script>

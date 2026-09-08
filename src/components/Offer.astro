@@ -17,7 +17,13 @@ const waUrl = buildWhatsAppUrl(t['offer.cta_prefill']);
           <li>{t[`offer.${key}`]}</li>
         ))}
       </ul>
-      <a href={waUrl} class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">
+      <a
+        href={waUrl}
+        class="btn btn--whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`${t['offer.cta']} — WhatsApp offer`}
+      >
         {t['offer.cta']}
       </a>
     </div>
@@ -29,7 +35,7 @@ const waUrl = buildWhatsAppUrl(t['offer.cta_prefill']);
     text-align: center;
   }
   .offer__price {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(2.5rem, 2rem + 3vw, 4rem);
     color: var(--color-gold);
     font-weight: 700;
